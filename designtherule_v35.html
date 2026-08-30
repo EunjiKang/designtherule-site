@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Design the Rule — Eunji Kang</title>
+<meta content="An evolving inquiry into the systems and rules that shape shared life—how they can be made visible, tested, remade, and repaired." name="description"/>
+<link href="https://designtherule.com/" rel="canonical"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<meta content="#0047ff" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Design the Rule" property="og:site_name"/>
+<meta content="en_GB" property="og:locale"/>
+<meta content="https://designtherule.com/" property="og:url"/>
+<meta content="Design the Rule — Eunji Kang" property="og:title"/>
+<meta content="An evolving inquiry into the systems and rules that shape shared life—how they can be made visible, tested, remade, and repaired." property="og:description"/>
+<meta content="https://designtherule.com/images/design-the-rule-social.jpg" property="og:image"/>
+<meta content="https://designtherule.com/images/design-the-rule-social.jpg" property="og:image:secure_url"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Design the Rule — an evolving inquiry into systems, governance and repair by Eunji Kang." property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Design the Rule — Eunji Kang" name="twitter:title"/>
+<meta content="An evolving inquiry into the systems and rules that shape shared life—how they can be made visible, tested, remade, and repaired." name="twitter:description"/>
+<meta content="https://designtherule.com/images/design-the-rule-social.jpg" name="twitter:image"/>
+<meta content="Design the Rule — an evolving inquiry into systems, governance and repair by Eunji Kang." name="twitter:image:alt"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Design the Rule",
+  "alternateName": "Design the Rule by Eunji Kang",
+  "url": "https://designtherule.com/"
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=IBM+Plex+Mono:wght@300;400;500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Syne:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#f4f2ed;--paper:#faf9f6;--ink:#111;--muted:#686862;--line:#d3d0c8;--blue:#0047ff;--soft:#e9e7e1;--max:1440px;--mono:'IBM Plex Mono',monospace;--body:'Inter',sans-serif;--display:'Syne',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;font-size:15px}a{color:inherit}button{font:inherit;color:inherit}button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}.skip{position:fixed;left:8px;top:-60px;z-index:999;background:#fff;padding:10px}.skip:focus{top:8px}
+.site{max-width:var(--max);margin:auto;border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:100vh;background:var(--paper)}
+header{position:sticky;top:0;z-index:40;display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--line);background:rgba(250,249,246,.94);backdrop-filter:blur(12px)}.brand{padding:18px 24px;font-family:var(--display);font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}.nav{display:flex}.nav a{padding:20px 14px;border-left:1px solid var(--line);text-decoration:none;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.nav a.active{background:var(--ink);color:#fff}.menu{display:none;padding:15px 18px;border:0;border-left:1px solid var(--line);background:none}
+main{min-height:70vh}.page{display:none}.page.active{display:block}.contour{position:relative;overflow:hidden}.contour:after{content:'';position:absolute;right:-11vw;top:-18vw;width:62vw;height:62vw;border-radius:50%;opacity:.36;pointer-events:none;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 18px,rgba(17,17,17,.18) 19px 20px);transform:scaleX(1.15) rotate(-11deg)}.contour>*{position:relative;z-index:1}
+.hero{min-height:72vh;display:grid;grid-template-columns:1.55fr .45fr;border-bottom:1px solid var(--line)}.hero-main{padding:9vw 5vw 6vw}.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}.hero h1{font-family:var(--display);font-size:clamp(44px,7vw,108px);line-height:.97;letter-spacing:-.055em;margin:0;max-width:1050px}.hero h1 em{color:var(--blue);font-style:normal}.hero-copy{padding:36px 30px;border-left:1px solid var(--line);display:flex;align-items:flex-end;font-size:16px}.actions{display:flex;gap:12px;margin-top:34px}.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--ink);text-decoration:none;background:transparent}.btn.primary{background:var(--ink);color:#fff}.btn.disabled{opacity:.5;pointer-events:none}
+.section-head{display:grid;grid-template-columns:220px 1fr;border-bottom:1px solid var(--line)}.section-head>*{padding:22px 24px}.section-head .label{font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;border-right:1px solid var(--line);color:var(--muted)}.section-head h2{font:600 clamp(28px,4vw,58px)/1.08 var(--display);margin:0;letter-spacing:-.035em}.thread-preview,.thread-list{display:grid;grid-template-columns:repeat(4,1fr)}.thread-card{padding:28px 22px;min-height:280px;border-right:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;justify-content:space-between}.thread-card:last-child{border-right:0}.thread-card:hover{background:var(--soft)}.thread-no{font:11px var(--mono);color:var(--blue)}.thread-card h3{font:600 25px/1.1 var(--display);margin:25px 0 14px}.thread-card p{color:var(--muted);margin:0}.status{font:10px var(--mono);text-transform:uppercase;letter-spacing:.1em}
+.position{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.position>div{padding:5vw}.position h2{font:600 clamp(36px,5vw,70px)/1.03 var(--display);letter-spacing:-.04em;margin:0}.position p{font-size:18px;margin:0}
+.page-hero{padding:7vw 5vw 5vw;border-bottom:1px solid var(--line);min-height:390px}.page-hero h1{font:600 clamp(48px,7vw,100px)/.98 var(--display);letter-spacing:-.05em;margin:0;max-width:1100px}.page-hero p{max-width:760px;font-size:18px;margin:30px 0 0}.thread-band{display:grid;grid-template-columns:150px 1fr 1fr;border-bottom:1px solid var(--line);min-height:310px}.thread-band>*{padding:30px}.thread-band .num{font:12px var(--mono);color:var(--blue);border-right:1px solid var(--line)}.thread-band .frame{border-right:1px solid var(--line)}.thread-band h2{font:600 clamp(32px,4vw,58px)/1.02 var(--display);margin:0 0 20px;letter-spacing:-.04em}.thread-band p{max-width:650px;color:var(--muted)}.thread-projects a{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none}.thread-projects a:hover{color:var(--blue)}.forming-list{margin-top:20px;padding-top:14px;border-top:1px dashed var(--line);color:var(--muted)}
+.filters{position:sticky;top:58px;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 32px;display:flex;align-items:center}.filter-panel{display:block}.filter-group{display:flex;gap:8px;flex-wrap:wrap}.filter-btn{width:54px;height:34px;border:1px solid var(--line);background:transparent;padding:0;font:9px var(--mono);text-transform:uppercase;letter-spacing:.08em;display:inline-flex;align-items:center;justify-content:center}.filter-btn.on{background:var(--blue);color:#fff;border-color:var(--blue)}.filter-label,.reset,.mobile-filter-toggle,.active-summary{display:none!important}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr)}.project-card{min-height:360px;padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column}.project-card:nth-child(3n){border-right:0}.project-card:hover{background:var(--soft);color:var(--ink)}.project-card.forming{background:#f5f4f0;color:var(--ink)}.card-top{display:flex;align-items:center;justify-content:space-between;gap:15px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.project-card h2{font:600 28px/1.08 var(--display);letter-spacing:-.03em;margin:auto 0 18px}.project-card p{margin:0;color:var(--muted)}
+.project-hero{padding:6vw 5vw 4vw;border-bottom:1px solid var(--line)}.back{font:11px var(--mono);text-transform:uppercase;letter-spacing:.08em;text-decoration:none}.project-kicker{margin-top:65px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.13em;color:var(--blue)}.project-hero h1{font:600 clamp(46px,7vw,96px)/.98 var(--display);letter-spacing:-.05em;margin:16px 0 20px;max-width:1180px}.project-sub{font:300 clamp(22px,3vw,38px)/1.25 var(--body);max-width:900px}.project-layout{display:grid;grid-template-columns:260px minmax(0,1fr)}.project-side{padding:28px 24px;border-right:1px solid var(--line)}.project-side dl{margin:0}.project-side dt{font:9px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-top:18px}.project-side dd{margin:4px 0}.project-body{padding:5vw;max-width:900px}.project-body p{font-size:18px;margin:0 0 28px}
+.project-media{margin:38px 0 42px;max-width:960px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.project-media-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0;font:9px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.project-media-viewport{position:relative;overflow:hidden}
+.project-media-track{display:flex;transition:transform .38s ease}
+.project-media-slide{flex:0 0 100%;padding:0}
+.image-slot{aspect-ratio:16/10;min-height:320px;border:1px solid var(--line);background:
+linear-gradient(135deg,transparent calc(50% - .5px),var(--line) 50%,transparent calc(50% + .5px)),
+linear-gradient(45deg,transparent calc(50% - .5px),var(--line) 50%,transparent calc(50% + .5px)),
+repeating-linear-gradient(0deg,transparent 0 39px,rgba(17,17,17,.045) 40px),
+repeating-linear-gradient(90deg,transparent 0 39px,rgba(17,17,17,.045) 40px);
+display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;color:var(--muted)}
+.image-slot strong{display:block;font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.image-slot span{display:block;font:10px var(--mono);line-height:1.7;text-transform:uppercase;letter-spacing:.08em}.image-slot.has-image{padding:0;background:#f5f4f0;display:block;overflow:hidden}.image-slot.has-image img{width:100%;height:100%;display:block;object-fit:cover}
+.project-media-controls{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.project-media-dots{display:flex;gap:7px}
+.project-media-dot{width:7px;height:7px;border:1px solid var(--ink);border-radius:50%;background:transparent;padding:0}
+.project-media-dot.on{background:var(--ink)}
+.project-media-btn{border:0;background:none;padding:4px 0;font:9px var(--mono);text-transform:uppercase;letter-spacing:.1em}
+.project-media-note{font:9px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.evidence{margin-top:55px;padding-top:25px;border-top:1px solid var(--line)}.evidence h3{font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase}.evidence a,.evidence span{display:block;padding:10px 0;border-bottom:1px solid var(--line)}.project-nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.project-nav a{padding:30px;text-decoration:none}.project-nav a+ a{border-left:1px solid var(--line);text-align:right}.connected{margin-top:30px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.connected a{color:var(--blue)}
+.prose{display:grid;grid-template-columns:minmax(0,1fr) 340px}.prose-main{padding:5vw}.prose-main p{font-size:18px;max-width:800px;margin:0 0 26px}.sidebar{border-left:1px solid var(--line);padding:30px 24px}.sidebar h3{font:11px var(--mono);text-transform:uppercase;letter-spacing:.1em;margin:30px 0 10px}.sidebar .item{padding:10px 0;border-bottom:1px solid var(--line)}
+.routes{display:grid;grid-template-columns:repeat(2,1fr)}.route{padding:32px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:240px}.route:nth-child(2n){border-right:0}.route.primary{background:#111;color:#fff}.route .n{font:11px var(--mono);color:var(--blue)}.route h2{font:600 34px/1.1 var(--display);margin:28px 0 15px}.contact-strip{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}.contact-strip>div{padding:25px;border-right:1px solid var(--line)}.contact-strip>div:last-child{border-right:0}.contact-strip small{display:block;font:9px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:8px}
+.writing-list{display:grid;grid-template-columns:1fr}.writing-item{display:grid;grid-template-columns:120px 1fr 170px;padding:25px;border-bottom:1px solid var(--line);text-decoration:none}.writing-item:hover{background:var(--soft)}.writing-item h2{font:600 28px/1.15 var(--display);margin:0}.writing-item .meta{font:10px var(--mono);text-transform:uppercase;color:var(--muted)}
+footer{display:grid;grid-template-columns:1fr auto;padding:22px 24px;border-top:1px solid var(--line);font:10px var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.privacy{position:fixed;bottom:18px;left:18px;right:18px;max-width:520px;background:#fff;border:1px solid var(--line);padding:16px;z-index:60;display:none}.privacy button{border:1px solid var(--ink);padding:7px 10px;background:none;margin-top:9px}
+@media(max-width:900px){header{grid-template-columns:1fr auto}.menu{display:block}.nav{display:none;position:absolute;top:58px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column}.nav.open{display:flex}.nav a{border-left:0;border-top:1px solid var(--line)}.hero{grid-template-columns:1fr;min-height:auto}.hero-main{padding:90px 24px 60px}.hero-copy{border-left:0;border-top:1px solid var(--line);padding:28px}.contour:after{width:110vw;height:110vw;right:-55vw;top:-15vw;opacity:.22;background:repeating-radial-gradient(circle,transparent 0 24px,rgba(17,17,17,.15) 25px 26px)}.thread-preview,.thread-list{grid-template-columns:1fr 1fr}.thread-card:nth-child(2){border-right:0}.thread-card{border-bottom:1px solid var(--line)}.position{grid-template-columns:1fr}.thread-band{grid-template-columns:70px 1fr}.thread-band .thread-projects{grid-column:1/3;border-top:1px solid var(--line)}.project-grid{grid-template-columns:repeat(2,1fr)}.project-card:nth-child(3n){border-right:1px solid var(--line)}.project-card:nth-child(2n){border-right:0}.project-layout{grid-template-columns:1fr}.project-side{border-right:0;border-bottom:1px solid var(--line)}.prose{grid-template-columns:1fr}.sidebar{border-left:0;border-top:1px solid var(--line)}.contact-strip{grid-template-columns:1fr}.contact-strip>div{border-right:0;border-bottom:1px solid var(--line)}.writing-item{grid-template-columns:80px 1fr}.writing-item .meta{grid-column:2;margin-top:12px}}
+@media(max-width:600px){.page-hero{padding:78px 22px 45px;min-height:auto}.section-head{grid-template-columns:1fr}.section-head .label{border-right:0;border-bottom:1px solid var(--line)}.thread-preview,.thread-list{grid-template-columns:1fr}.thread-card{border-right:0}.filters{top:58px}.mobile-filter-toggle{display:block;border:1px solid var(--ink);padding:9px 12px;background:none}.filter-panel{display:none;width:100%}.filter-panel.open{display:block}.filter-group{margin-top:9px}.project-grid{grid-template-columns:1fr}.project-card,.project-card:nth-child(3n){border-right:0;min-height:290px}.project-hero{padding:70px 22px 42px}.project-layout{display:block}.project-side dl{display:grid;grid-template-columns:110px 1fr;gap:0 10px}.project-side dt,.project-side dd{padding:10px 0;border-bottom:1px solid var(--line);margin:0}.project-body{padding:35px 22px}.project-body p{font-size:17px}.project-media{margin:30px 0 34px}.image-slot{min-height:220px;aspect-ratio:4/3}.project-media-head{align-items:flex-start;flex-direction:column;gap:4px}.project-nav{grid-template-columns:1fr}.project-nav a+ a{border-left:0;border-top:1px solid var(--line);text-align:left}.routes{grid-template-columns:1fr}.route{border-right:0}.writing-item{grid-template-columns:1fr}.writing-item .meta{grid-column:1}.contact-strip{grid-template-columns:1fr}footer{grid-template-columns:1fr;gap:8px}.hero h1{font-size:49px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* v10/v11 editorial layout restoration — newest v12 content retained */
+:root{
+  --bg:#f5f3ee;--paper:#f5f3ee;--ink:#111;--muted:#5a5a56;--line:#d8d5ce;
+  --blue:#0047ff;--soft:#eef3ff;--max:none;
+  --display:'Plus Jakarta Sans',sans-serif;--body:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace;
+}
+body{font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;background:var(--bg)}
+.site{max-width:none;margin:0;border:0;background:var(--bg)}
+header{height:52px;display:flex;align-items:stretch;background:rgba(245,243,238,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.brand{display:flex;align-items:center;padding:0 28px;border-right:1px solid var(--line);font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.brand::after{content:none}
+.nav{margin-left:0;display:flex;flex:1}
+.nav a{display:flex;align-items:center;padding:0 20px;border-left:0;border-right:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);transition:.18s background,.18s color}
+.nav a:hover,.nav a.active{color:var(--blue);background:#eef3ff}
+.nav a:last-child{margin-left:auto;background:var(--blue);color:white;padding:0 24px}
+.nav a:last-child:hover,.nav a:last-child.active{background:var(--ink);color:#fff}
+.menu{height:52px}
+.page.active{animation:rise .55s ease both}@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.contour:after{right:-13vw;top:-25vw;width:58vw;height:58vw;opacity:.24;background:repeating-radial-gradient(ellipse at 50% 50%,transparent 0 22px,rgba(17,17,17,.16) 23px 24px);transform:scaleX(1.18) rotate(-9deg)}
+.hero{grid-template-columns:minmax(0,1fr) 380px;min-height:calc(100vh - 52px)}
+.hero-main{padding:72px 64px 60px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line)}
+.eyebrow{font-size:9px;letter-spacing:.2em;margin-bottom:44px;color:#9a9a96}
+.hero h1{font-family:var(--display);font-size:clamp(2.8rem,5.5vw,5rem);line-height:1.08;letter-spacing:-.02em;font-weight:600;max-width:930px}
+.hero h1 em{display:block;font-weight:500}
+.hero-copy{border-left:0;padding:48px 32px 40px;align-items:flex-end;font-size:14px;line-height:1.85;color:var(--muted)}
+.actions{margin-top:44px}.btn{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:11px 20px;border-color:var(--line)}.btn.primary{background:var(--ink)}.btn:hover{border-color:var(--blue);color:var(--blue);background:#eef3ff}.btn.primary:hover{background:var(--blue);color:#fff}
+.section-head{grid-template-columns:220px 1fr}.section-head>*{padding:20px 32px}.section-head h2{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,3.4rem);line-height:1.12;letter-spacing:-.02em}
+.thread-preview{grid-template-columns:1.6fr 1fr 1fr 1fr}.thread-card{padding:32px 28px 24px;min-height:330px}.thread-card:hover{background:#eef3ff}.thread-card h3{font-family:'Syne',sans-serif;font-size:1.35rem;line-height:1.18;margin:34px 0 14px}.thread-card p{font-size:12px;line-height:1.75}.thread-no,.status{font-size:9px;letter-spacing:.12em}
+.position{grid-template-columns:1fr 1fr}.position>div{padding:72px 64px}.position h2{font-size:clamp(2.2rem,4.2vw,4.1rem);line-height:1.08;letter-spacing:-.025em}.position p{font-size:15px;line-height:1.85;color:var(--muted)}
+.page-hero{padding:64px 64px 56px;min-height:360px}.page-hero h1{font-size:clamp(2.8rem,5.5vw,5rem);line-height:1.06;letter-spacing:-.025em}.page-hero p{font-size:15px;line-height:1.85;color:var(--muted);max-width:760px}
+.thread-band{grid-template-columns:56px 1fr 1fr;min-height:auto}.thread-band>*{padding:36px 32px}.thread-band .num{padding:32px 0;display:flex;justify-content:center;font-size:10px}.thread-band .frame{padding:36px 48px}.thread-band h2{font-family:var(--display);font-size:1.55rem;line-height:1.14;letter-spacing:-.01em}.thread-band p{font-size:13px;line-height:1.8}.thread-key{color:var(--blue);font-style:italic;font-weight:500}.thread-status-line{display:flex;align-items:center;gap:12px;margin-top:28px;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#999}.thread-status-line:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--ink);display:block;flex:0 0 auto}.thread-band:hover{background:#eef3ff}.thread-projects a{font-size:13px;padding:10px 0}
+.filters{top:52px;padding:11px 32px;background:rgba(245,243,238,.97)}.filter-btn{font-size:8px;letter-spacing:.08em;padding:5px 10px}.filter-btn.on{background:var(--blue);border-color:var(--blue)}
+.project-grid{grid-template-columns:1.6fr 1fr 1fr}.project-card{min-height:330px;padding:32px 28px 24px}.project-card:hover{background:#eef3ff;color:var(--ink)}.project-card h2{font-family:'Syne',sans-serif;font-size:1.5rem;line-height:1.2;letter-spacing:0}.project-card p{font-size:12px;line-height:1.75}.project-card:nth-child(6n+1){min-height:440px}.card-top{font-size:8px;letter-spacing:.1em}
+.project-hero{padding:12px 64px 52px}.project-hero .back{display:inline-block;padding:12px 0 0;font-size:9px;color:#9a9a96}.project-kicker{margin-top:48px;font-size:9px}.project-hero h1{font-size:clamp(2.6rem,5vw,4.8rem);line-height:1.06;letter-spacing:-.02em;max-width:1000px}.project-sub{font-size:clamp(1.2rem,2vw,1.7rem);line-height:1.5;color:var(--muted);max-width:850px}
+.project-layout{grid-template-columns:minmax(0,1fr) 280px}.project-side{grid-column:2;padding:36px 28px;border-right:0;border-left:1px solid var(--line)}.project-body{grid-column:1;grid-row:1;padding:52px 64px;max-width:none}.project-body p{font-size:14px;line-height:1.9;max-width:760px;margin-bottom:25px}.project-media{max-width:760px}.project-side dt{font-size:8px}.project-side dd{font-size:12px;line-height:1.55}.evidence{max-width:760px}.evidence h3{font-size:9px}.evidence a,.evidence span{font-size:12px}.project-nav a{padding:28px 64px;font-size:13px}.project-nav small{font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#9a9a96}
+.prose{grid-template-columns:minmax(0,1fr) 320px}.prose-main{padding:60px 64px}.prose-main p{font-size:14px;line-height:1.9;max-width:760px}.sidebar{padding:36px 28px}.sidebar h3{font-size:9px}.sidebar .item{font-size:12px}
+.writing-item{grid-template-columns:120px 1fr 210px;padding:28px 32px}.writing-item h2{font-family:'Syne',sans-serif;font-size:1.45rem;line-height:1.2}.writing-item:hover{background:#f0fff8}.writing-item .meta{font-size:9px}
+.routes{grid-template-columns:repeat(2,1fr)}.route{padding:38px 32px;min-height:270px}.route h2{font-family:'Syne',sans-serif;font-size:1.75rem}.route.primary{background:var(--blue)}.route.primary .n{color:#fff}.contact-strip>div{padding:28px 32px}
+footer{padding:20px 28px;font-size:9px}
+@media(max-width:900px){
+ header{display:grid;grid-template-columns:1fr auto}.brand{border-right:0}.nav{top:52px;background:var(--bg)}.nav a:last-child{margin-left:0}.hero{grid-template-columns:1fr;min-height:auto}.hero-main{padding:88px 28px 60px;border-right:0}.hero-copy{border-top:1px solid var(--line);padding:32px 28px}.thread-preview{grid-template-columns:1fr 1fr}.thread-card:nth-child(2n){border-right:0}.project-grid{grid-template-columns:1fr 1fr}.project-card:nth-child(6n+1){min-height:330px}.project-layout{grid-template-columns:1fr}.project-side{grid-column:1;grid-row:1;border-left:0;border-bottom:1px solid var(--line)}.project-body{grid-column:1;grid-row:2;padding:44px 28px}.prose-main{padding:48px 28px}.position>div,.page-hero{padding-left:28px;padding-right:28px}
+}
+@media(max-width:600px){
+ .brand{padding:0 18px}.hero h1{font-size:2.75rem}.contour:after{opacity:.16}.section-head{grid-template-columns:1fr}.thread-preview,.project-grid{grid-template-columns:1fr}.thread-card,.project-card{min-height:270px;border-right:0}.thread-band{grid-template-columns:48px 1fr}.thread-band .frame{padding:30px 24px}.thread-band .thread-projects{grid-column:1/3}.position{grid-template-columns:1fr}.position>div{padding:44px 24px}.page-hero{padding:74px 24px 44px}.filters{padding:10px 18px}.project-hero{padding:12px 24px 40px}.project-nav a{padding:24px}.writing-item{grid-template-columns:1fr;padding:24px}.routes{grid-template-columns:1fr}
+}
+
+
+/* Writing archive */
+.writing-hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(240px,.55fr);border-bottom:1px solid var(--line)}
+.writing-hero-main{padding:52px 60px 64px}
+.writing-kicker{display:flex;align-items:center;gap:13px;font:9px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#999}
+.writing-kicker:before{content:'';width:34px;height:3px;background:#18c964;display:block}
+.writing-hero h1{font:600 clamp(48px,6vw,78px)/.96 var(--display);letter-spacing:-.04em;margin:44px 0 26px;max-width:760px}
+.writing-hero h1 em{color:#15b857;font-style:italic;font-weight:500}
+.writing-hero p{max-width:760px;font-size:17px;line-height:1.75;color:#5f5d58}
+.writing-stats{border-left:1px solid var(--line);padding:44px 48px;display:grid;align-content:center;gap:28px}
+.writing-stat strong{display:block;font:500 46px/1 var(--display);letter-spacing:-.04em}
+.writing-stat span{display:block;margin-top:9px;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#999}
+.writing-filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:16px;border-bottom:1px solid var(--line);position:sticky;top:58px;background:rgba(247,245,239,.96);backdrop-filter:blur(8px);z-index:5}
+.writing-filters-label{font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#999;margin-right:10px}
+.writing-filter{border:1px solid var(--line);background:transparent;padding:8px 14px;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.writing-filter.active{background:#17ca61;border-color:#17ca61;color:#06180d}
+.writing-section-head{display:grid;grid-template-columns:1fr auto;align-items:center;padding:24px 60px;border-bottom:1px solid var(--line)}
+.writing-section-head h2{font:600 16px var(--display);letter-spacing:.02em;margin:0;display:flex;align-items:center;gap:14px}
+.writing-section-head h2:before{content:'';width:9px;height:9px;border-radius:50%;background:#17ca61}
+.writing-section-head p{font:9px var(--mono);letter-spacing:.08em;color:#aaa;margin:0}
+.writing-archive{display:block}
+.writing-card{display:grid;grid-template-columns:100px 190px 1fr;gap:26px;padding:28px 60px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.writing-card:hover{background:#f0fff8}
+.writing-date{font:10px var(--mono);letter-spacing:.08em;color:#999;padding-top:7px}
+.writing-thumb{aspect-ratio:4/3;background:#d8d5cf;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#8f8c85;text-align:center;padding:12px}
+.writing-content h3{font:600 1.35rem/1.18 var(--display);letter-spacing:0;color:var(--ink);margin:0 0 14px}
+.writing-content p{font-size:12px;line-height:1.75;color:var(--muted);margin:0 0 13px;max-width:860px}
+.tag-row{display:flex;gap:7px;flex-wrap:wrap}
+.tag{border:1px solid var(--line);padding:5px 8px;font:8px var(--mono);letter-spacing:.09em;text-transform:uppercase}
+.tag.thread{border-color:#17ca61;color:#10a74c}
+.writing-source{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;margin-top:13px;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#999}
+.writing-source .type{border:1px solid #17ca61;color:#10a74c;padding:5px 8px}
+.writing-empty{display:none;padding:60px;text-align:center;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#999}
+
+/* Article pages */
+.article-page{display:none}
+.article-shell{display:grid;grid-template-columns:minmax(0,1fr) 300px;border-bottom:1px solid var(--line)}
+.article-main{padding:50px 64px 80px}
+.article-aside{border-left:1px solid var(--line);padding:50px 34px}
+.article-back{display:inline-block;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;margin-bottom:42px}
+.article-meta{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:18px}
+.article-title{font:600 clamp(42px,5vw,72px)/1.02 var(--display);letter-spacing:-.04em;margin:0 0 22px}
+.article-standfirst{font-size:20px;line-height:1.6;color:#5d5a55;max-width:820px;margin-bottom:42px}
+.article-lead-image{aspect-ratio:16/9;border:1px solid var(--line);background:#d8d5cf;display:flex;align-items:center;justify-content:center;text-align:center;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#888;margin:0 0 42px}
+.article-body{max-width:760px}
+.article-body p{font-size:18px;line-height:1.85;margin:0 0 28px}
+.article-body h2{font:600 30px/1.2 var(--display);margin:52px 0 18px}
+.article-inline-image{aspect-ratio:4/3;border:1px solid var(--line);background:#dedbd5;display:flex;align-items:center;justify-content:center;text-align:center;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#888;margin:36px 0 10px}
+.article-caption{font:8px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#999;margin-bottom:36px}
+.article-aside dl{margin:0}
+.article-aside dt{font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#999;margin-top:20px}
+.article-aside dd{margin:6px 0 0;font-size:13px;line-height:1.6}
+.article-share{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.article-share a,.article-share button{border:1px solid var(--line);background:none;padding:8px 10px;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:inherit;text-decoration:none}
+.external-feature-note{padding:24px;border:1px solid var(--line);background:#f4f2ed;margin:34px 0;font-size:14px;line-height:1.7}
+@media(max-width:900px){
+  .writing-hero{grid-template-columns:1fr}.writing-stats{border-left:0;border-top:1px solid var(--line);grid-template-columns:repeat(3,1fr)}
+  .writing-card{grid-template-columns:80px 150px 1fr;padding:24px}
+  .writing-section-head{padding:20px 24px}
+  .article-shell{grid-template-columns:1fr}.article-aside{border-left:0;border-top:1px solid var(--line)}
+}
+@media(max-width:650px){
+  .writing-hero-main{padding:76px 24px 44px}.writing-hero h1{font-size:50px}.writing-stats{padding:28px 24px;gap:16px}.writing-stat strong{font-size:34px}
+  .writing-filters{top:58px}.writing-card{grid-template-columns:1fr;padding:24px}.writing-date{order:0}.writing-thumb{max-width:220px}.writing-content{order:2}
+  .writing-section-head{grid-template-columns:1fr;gap:8px}
+  .article-main{padding:76px 24px 54px}.article-aside{padding:32px 24px}.article-title{font-size:44px}.article-standfirst{font-size:18px}.article-body p{font-size:17px}
+}
+
+
+/* Final settlement refinements */
+.hero-main{padding-top:52px}
+.home-thread-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.home-thread-status{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--ink);padding:6px 11px;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:transparent}
+.home-thread-status.forming{border-color:var(--blue);color:var(--blue)}
+.project-card{padding:0;min-height:0}
+.project-card .project-thumb{aspect-ratio:4/3;border-bottom:1px solid var(--line);background:linear-gradient(135deg,transparent calc(50% - .5px),var(--line) 50%,transparent calc(50% + .5px)),linear-gradient(45deg,transparent calc(50% - .5px),var(--line) 50%,transparent calc(50% + .5px)),repeating-linear-gradient(0deg,transparent 0 31px,rgba(17,17,17,.035) 32px),repeating-linear-gradient(90deg,transparent 0 31px,rgba(17,17,17,.035) 32px);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#999}.project-card .project-thumb.has-image{background:#f5f4f0;padding:0;display:block;overflow:hidden}.project-card .project-thumb.has-image img{width:100%;height:100%;display:block;object-fit:cover}
+.project-card .project-card-copy{padding:24px 28px 26px;display:flex;flex-direction:column;min-height:260px}
+.project-card .project-thread-label{font-size:9px;letter-spacing:.12em;color:var(--blue)}
+.project-card .project-status{display:inline-flex;align-items:center;justify-content:center;border:1px solid currentColor;padding:6px 11px;font:9px var(--mono);letter-spacing:.12em;line-height:1;color:var(--ink);background:transparent}
+.project-card .project-status.forming{color:var(--blue)}
+.project-card h2{margin:32px 0 18px}
+.project-card .project-card-copy>.card-top:last-child{margin-top:auto!important;padding-top:20px}
+.project-inquiry-label{font:8px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin:34px 0 10px}
+.project-inquiry{font-style:italic;color:var(--muted);font-size:13px;line-height:1.75}
+.project-nav a{transition:color .2s ease}.project-nav a:hover{color:var(--blue)}
+.evidence a{color:var(--blue)}
+a[target="_blank"]{color:var(--blue)}
+footer{margin-top:40px}
+.footer-rights{margin-top:6px}
+footer{display:block}
+footer>div:last-child{margin-top:20px;text-align:right}
+#about .about-project-layout{
+  border-bottom:1px solid var(--line);
+}
+@media(max-width:600px){footer{margin-top:28px}}
+#collaborate .route{
+  min-height:270px;
+  padding:30px 32px 34px;
+}
+#collaborate .route h2{
+  margin:28px 0 14px;
+}
+#collaborate .route p{
+  line-height:1.75;
+}
+@media(max-width:650px){
+  #collaborate .route{min-height:auto;padding:30px 24px}
+  #collaborate .route h2{margin-top:24px}
+}
+/* Organic topographic contour family */
+.contour:after{
+  right:-8%;
+  top:-38%;
+  width:64%;
+  height:155%;
+  border-radius:46% 54% 43% 57% / 52% 44% 56% 48%;
+  opacity:1;
+  background:
+    repeating-radial-gradient(
+      ellipse 68% 54% at var(--contour-x,54%) var(--contour-y,48%),
+      transparent 0 25px,
+      rgba(17,17,17,.055) 25.5px 26.5px,
+      transparent 27px 34px
+    );
+  transform:rotate(var(--contour-rotate,-8deg)) skewX(var(--contour-skew,-3deg));
+}
+#home .contour{--contour-x:61%;--contour-y:42%;--contour-rotate:-12deg;--contour-skew:-5deg}
+#threads .contour{--contour-x:42%;--contour-y:56%;--contour-rotate:7deg;--contour-skew:4deg}
+#projects .contour{--contour-x:64%;--contour-y:58%;--contour-rotate:-4deg;--contour-skew:6deg}
+#writing .contour{--contour-x:38%;--contour-y:43%;--contour-rotate:10deg;--contour-skew:-4deg}
+#about .contour{--contour-x:58%;--contour-y:37%;--contour-rotate:-10deg;--contour-skew:3deg}
+#collaborate .contour{--contour-x:44%;--contour-y:62%;--contour-rotate:5deg;--contour-skew:-6deg}
+#project .contour{--contour-x:62%;--contour-y:46%;--contour-rotate:-7deg;--contour-skew:2deg}
+@media(max-width:900px){
+  .contour:after{right:-46%;top:-18%;width:115%;height:125%}
+}
+#projects .page-hero{
+  background:var(--paper) url("images/backgrounds/thread-04-forming-lines.png") center 48% / 100% auto no-repeat;
+}
+#projects .page-hero:after,
+#project.project-unravel .project-hero:after{
+  display:none;
+}
+#project.project-unravel .project-hero{
+  background:var(--paper) url("images/backgrounds/unravel-lines.png") center 55% / 100% auto no-repeat;
+}
+@media(max-width:900px){
+  #projects .page-hero,
+  #project.project-unravel .project-hero{background-size:auto 100%}
+}
+/* Supplied contour artwork for primary navigation-page heroes */
+#home .hero,
+#threads .page-hero,
+#projects .page-hero,
+#writing .writing-hero,
+#about .page-hero,
+#collaborate .page-hero{
+  background-color:var(--paper);
+  background-repeat:no-repeat;
+  background-size:100% auto;
+}
+#home .hero,
+#about .page-hero{
+  background-image:url("images/backgrounds/navigation-lines-unravel.png");
+  background-position:center top;
+}
+#threads .page-hero,
+#collaborate .page-hero{
+  background-image:url("images/backgrounds/navigation-lines-forming.png");
+  background-position:center bottom;
+}
+#projects .page-hero{
+  background-image:url("images/backgrounds/navigation-lines-forming.png");
+  background-position:center bottom;
+}
+#writing .writing-hero{
+  background-image:url("images/backgrounds/navigation-lines-south-africa.png");
+  background-position:center bottom;
+}
+#home .hero:after,
+#threads .page-hero:after,
+#projects .page-hero:after,
+#writing .writing-hero:after,
+#about .page-hero:after,
+#collaborate .page-hero:after{
+  display:none;
+}
+@media(max-width:900px){
+  #home .hero,
+  #threads .page-hero,
+  #projects .page-hero,
+  #writing .writing-hero,
+  #about .page-hero,
+  #collaborate .page-hero{
+    background-size:auto 170%;
+  }
+}
+/* Distinct directional compositions for each primary page */
+#home .hero:after,
+#threads .page-hero:after,
+#projects .page-hero:after,
+#writing .writing-hero:after,
+#about .page-hero:after,
+#collaborate .page-hero:after{
+  display:block;
+  inset:-18%;
+  width:auto;
+  height:auto;
+  border-radius:0;
+  opacity:1;
+  background-color:var(--paper);
+  background-repeat:no-repeat;
+  background-size:100% auto;
+  pointer-events:none;
+}
+#home .hero:after{
+  background-image:url("images/backgrounds/navigation-lines-unravel.png");
+  background-position:center top;
+  transform:rotate(-7deg);
+}
+#threads .page-hero:after{
+  background-image:url("images/backgrounds/navigation-lines-forming.png");
+  background-position:center bottom;
+  transform:rotate(6deg);
+}
+#threads .page-hero{
+  background-image:none;
+}
+#threads .page-hero:after{
+  inset:-18%;
+  width:auto;
+  background-size:100% auto;
+  clip-path:inset(0 18% 0 0);
+}
+#projects .page-hero:after{
+  background-image:url("images/backgrounds/navigation-lines-forming.png");
+  background-position:right bottom;
+  transform:rotate(-3deg);
+}
+#writing .writing-hero:after{
+  background-image:url("images/backgrounds/navigation-lines-south-africa.png");
+  background-position:center bottom;
+  transform:rotate(9deg);
+}
+#about .page-hero:after{
+  background-image:url("images/backgrounds/navigation-lines-unravel.png");
+  background-position:left top;
+  transform:rotate(-11deg);
+}
+#collaborate .page-hero:after{
+  background-image:url("images/backgrounds/navigation-lines-forming.png");
+  background-position:left bottom;
+  transform:rotate(4deg);
+}
+/* Keep the supplied contour artwork present but quieter behind page content. */
+#home .hero,
+#threads .page-hero,
+#projects .page-hero,
+#writing .writing-hero,
+#about .page-hero,
+#collaborate .page-hero{
+  background-image:none;
+}
+#home .hero:after,
+#threads .page-hero:after,
+#projects .page-hero:after,
+#writing .writing-hero:after,
+#about .page-hero:after,
+#collaborate .page-hero:after{
+  opacity:.5;
+}
+/* Final direction: remove all decorative contour/topographic patterns. */
+.contour{
+  background-image:none !important;
+}
+.contour:after{
+  display:none !important;
+  content:none !important;
+}
+/* Quieter project grid with a unified, lifted active card */
+#projects .project-grid{
+  gap:0;
+  padding:0;
+  background:transparent;
+}
+#projects .project-card,
+#projects .project-card:nth-child(3n),
+#projects .project-card:nth-child(2n){
+  position:relative;
+  z-index:0;
+  border:0;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+  transition:background .22s ease;
+}
+#projects .project-card:nth-child(3n){border-right:0}
+#projects .project-card .project-thumb{
+  position:relative;
+  border:0!important;
+  outline:0;
+  box-shadow:none;
+}
+#projects .project-card .project-thumb.has-image img{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:-4px;
+  width:100%;
+  height:calc(100% + 4px);
+  object-fit:cover;
+}
+#projects .project-card .project-card-copy{
+  border:0!important;
+  outline:0;
+  box-shadow:none;
+  position:relative;
+  z-index:2;
+  margin-top:0;
+}
+#projects .project-card:hover,
+#projects .project-card:focus-visible{
+  z-index:2;
+  background:#edf2ff;
+  transform:none;
+  box-shadow:none;
+}
+#projects .project-card:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+#projects .project-card .project-thumb:after{
+  background:rgba(0,71,255,.055);
+}
+@media(max-width:600px){
+  #projects .project-card,
+  #projects .project-card:nth-child(3n),
+  #projects .project-card:nth-child(2n){border-right:0}
+  #projects .project-card:hover,
+  #projects .project-card:focus-visible{transform:none}
+}
+@media(min-width:601px) and (max-width:900px){
+  #projects .project-card:nth-child(3n){border-right:1px solid var(--line)}
+  #projects .project-card:nth-child(2n){border-right:0}
+}
+#project .connected{font-weight:400}
+#project .connected a{font-size:12px;font-weight:400}
+#project .project-body>p strong.project-highlight{
+  background:linear-gradient(transparent 8%,rgba(74,144,255,.13) 8%);
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+  padding:0 .04em;
+}
+#threads .thread-band .frame p strong.thread-highlight{
+  font-weight:600;
+  background:linear-gradient(transparent 8%,rgba(74,144,255,.13) 8%);
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+  padding:0 .04em;
+}
+#home .thread-card p .thread-keyword{
+  font-weight:600;
+  color:var(--ink);
+  background:linear-gradient(transparent 18%,rgba(74,144,255,.13) 18%);
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+  padding:0 .03em;
+}
+.writing-hero{display:block}.writing-stats{display:none}.writing-hero-main{padding:52px 60px 64px;max-width:none}
+.writing-hero h1 em{font-style:normal}
+.nav a[href="#writing"].active{color:#0dad4f;background:#e9fff3}
+.page-hero h1 .blue-title{color:var(--blue)}
+.about-profile-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;border-bottom:1px solid var(--line)}
+.about-profile-copy{padding:54px 58px}
+.about-profile-photo{border-left:1px solid var(--line);padding:34px}
+.profile-photo-slot{aspect-ratio:4/5;border:1px solid var(--line);background:linear-gradient(135deg,transparent calc(50% - .5px),var(--line) 50%,transparent calc(50% + .5px)),linear-gradient(45deg,transparent calc(50% - .5px),var(--line) 50%,transparent calc(50% + .5px));display:flex;align-items:center;justify-content:center;text-align:center;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#999;padding:18px}
+.route h2{font-size:30px;line-height:1.18}.route p{font-size:14px;line-height:1.8;color:var(--muted)}
+.route.primary h2,.route.primary p{color:white}
+.writing-card.coming-soon{cursor:default}.writing-card.coming-soon:hover{background:#f0fff8}
+.writing-card.coming-soon-break{margin-top:0;border-top:0}
+.writing-coming-head{
+  margin-top:0;
+  padding:18px 32px;
+  border-top:0;
+  border-bottom:1px solid var(--line);
+  font:500 10px var(--mono);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.tag.language{border-color:#17ca61;color:#0b9c45}
+@media(max-width:900px){.about-profile-grid{grid-template-columns:1fr}.about-profile-photo{border-left:0;border-top:1px solid var(--line);max-width:420px}.project-card .project-card-copy{min-height:230px}}
+@media(max-width:650px){.hero-main{padding-top:74px}.writing-hero-main{padding:76px 24px 44px}.about-profile-copy{padding:42px 24px}.about-profile-photo{padding:24px}.home-thread-head{align-items:flex-start}}
+
+
+/* v15 refinements: About and Collaborate align with the main editorial system */
+#about .page-hero h1,
+#collaborate .page-hero h1{
+  font-family:var(--display);
+  font-weight:600;
+  letter-spacing:-.045em;
+  color:var(--ink);
+}
+#about .page-hero{
+  padding-bottom:54px;
+}
+#about .page-hero h1{
+  max-width:1050px;
+  line-height:.96;
+}
+#about .page-hero h1 .title-line{
+  display:block;
+}
+#about .page-hero h1 .blue-title{
+  color:var(--blue);
+}
+.about-editorial-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(330px,.55fr);
+  border-bottom:1px solid var(--line);
+}
+.about-editorial-copy{
+  padding:52px 58px 72px;
+}
+.about-editorial-copy p{
+  max-width:900px;
+  margin:0 0 25px;
+  font-size:14px;
+  line-height:1.9;
+  color:var(--ink);
+}
+.about-editorial-side{
+  border-left:1px solid var(--line);
+}
+.about-profile-photo{
+  padding:42px;
+  border-bottom:1px solid var(--line);
+}
+.profile-photo-slot{
+  width:100%;
+  aspect-ratio:4/5;
+  min-height:440px;
+}
+.about-facts{
+  padding:42px;
+}
+.about-facts h2{
+  margin:0 0 22px;
+  font:500 10px var(--mono);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.about-facts .fact{
+  padding:15px 0;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
+  line-height:1.65;
+  color:var(--ink);
+}
+.about-facts .fact:first-of-type{border-top:1px solid var(--line)}
+.about-facts .education-title{
+  margin-top:48px;
+}
+#collaborate .page-hero p{
+  max-width:850px;
+  font-size:16px;
+  line-height:1.75;
+  color:var(--muted);
+}
+#collaborate .routes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+#collaborate .route{
+  min-height:340px;
+  padding:48px 50px;
+}
+#collaborate .route .n{
+  font:500 10px var(--mono);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+#collaborate .route h2{
+  margin:40px 0 20px;
+  font:600 30px/1.12 var(--display);
+  letter-spacing:-.025em;
+  color:var(--ink);
+}
+#collaborate .route p{
+  max-width:650px;
+  margin:0;
+  font-size:14px;
+  line-height:1.8;
+  color:var(--muted);
+}
+#collaborate .route.primary h2,
+#collaborate .route.primary p,
+#collaborate .route.primary .n{
+  color:#fff;
+}
+#collaborate .contact-strip small{
+  font:500 9px var(--mono);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+#collaborate .contact-strip a,
+#collaborate .contact-strip span{
+  font-size:16px;
+  line-height:1.5;
+}
+@media(max-width:900px){
+  .about-editorial-grid{grid-template-columns:1fr}
+  .about-editorial-side{border-left:0;border-top:1px solid var(--line)}
+  .about-profile-photo,.about-facts{padding:32px 24px}
+  .profile-photo-slot{max-width:480px;min-height:0}
+  #collaborate .routes{grid-template-columns:1fr}
+  #collaborate .route{min-height:auto;padding:40px 24px}
+}
+@media(max-width:650px){
+  #about .page-hero h1 .title-line{display:block}
+  .about-editorial-copy{padding:40px 24px 52px}
+  .about-editorial-copy p{font-size:14px}
+}
+
+
+/* v15 updated — Collaborate uses the same high-level page system */
+#collaborate .page-hero{
+  padding:44px 58px 58px;
+  min-height:auto;
+  border-bottom:1px solid var(--line);
+}
+#collaborate .page-hero .eyebrow{
+  margin:0 0 40px;
+  font:500 9px var(--mono);
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  color:#9a9892;
+}
+#collaborate .page-hero h1{
+  max-width:1050px;
+  margin:0 0 30px;
+  font:600 clamp(54px,7vw,92px)/.98 var(--display);
+  letter-spacing:-.045em;
+}
+#collaborate .page-hero p{
+  max-width:930px;
+  margin:0;
+  font-size:15px;
+  line-height:1.8;
+  color:var(--muted);
+}
+#collaborate .contact-strip{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-bottom:1px solid var(--line);
+}
+#collaborate .contact-strip>div{
+  min-height:132px;
+  padding:28px 30px;
+  border-right:1px solid var(--line);
+}
+#collaborate .contact-strip>div:last-child{border-right:0}
+#collaborate .contact-strip small{
+  display:block;
+  margin-bottom:14px;
+  color:#77746e;
+}
+#collaborate .contact-strip a,
+#collaborate .contact-strip span{
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.45;
+}
+#collaborate .routes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+#collaborate .route{
+  min-height:355px;
+  padding:44px 46px 50px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:transparent;
+}
+#collaborate .route:nth-child(2n){border-right:0}
+#collaborate .route .n{
+  color:var(--blue);
+  font:500 10px var(--mono);
+  letter-spacing:.12em;
+}
+#collaborate .route h2{
+  margin:54px 0 22px;
+  font:600 31px/1.15 var(--display);
+  letter-spacing:-.025em;
+  color:var(--ink);
+}
+#collaborate .route p{
+  max-width:650px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.85;
+}
+#collaborate .route.primary{
+  background:var(--blue);
+}
+#collaborate .route.primary .n,
+#collaborate .route.primary h2,
+#collaborate .route.primary p{
+  color:white;
+}
+.original-title{
+  display:block;
+  margin-top:8px;
+  font:500 10px/1.5 var(--mono);
+  letter-spacing:.04em;
+  color:#8f8c86;
+}
+@media(max-width:900px){
+  #collaborate .contact-strip{grid-template-columns:1fr}
+  #collaborate .contact-strip>div{border-right:0;border-bottom:1px solid var(--line)}
+  #collaborate .contact-strip>div:last-child{border-bottom:0}
+  #collaborate .routes{grid-template-columns:1fr}
+  #collaborate .route{border-right:0;min-height:auto}
+}
+@media(max-width:650px){
+  #collaborate .page-hero{padding:76px 24px 44px}
+  #collaborate .page-hero h1{font-size:50px}
+  #collaborate .route{padding:38px 24px}
+  #collaborate .route h2{margin-top:38px;font-size:28px}
+}
+
+
+/* Final v15 refinements */
+#collaborate .routes{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+#collaborate .route{
+  min-height:430px;
+  padding:34px 34px 42px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:transparent;
+}
+#collaborate .route:nth-child(2n){border-right:1px solid var(--line)}
+#collaborate .route:last-child{border-right:0}
+#collaborate .route h2{
+  margin:52px 0 20px;
+  font:600 27px/1.12 var(--display);
+  letter-spacing:-.025em;
+}
+#collaborate .route p{
+  font-size:13px;
+  line-height:1.8;
+}
+#collaborate .route.primary{
+  background:var(--blue);
+}
+@media(max-width:1150px){
+  #collaborate .routes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #collaborate .route:nth-child(2n){border-right:0}
+  #collaborate .route:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media(max-width:650px){
+  #collaborate .routes{grid-template-columns:1fr}
+  #collaborate .route{border-right:0}
+}
+
+
+.about-copy-with-photo{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,340px);
+  gap:44px;
+  align-items:start;
+}
+.about-profile-inline{
+  padding-top:4px;
+}
+.about-profile-inline .profile-photo-slot{
+  min-height:0;
+  width:100%;
+}
+@media(max-width:1000px){
+  .about-copy-with-photo{grid-template-columns:1fr}
+  .about-profile-inline{max-width:420px}
+}
+
+
+#threads .page-hero .blue-title{color:var(--blue)}
+
+
+/* Final refinement set */
+#home .hero .eyebrow{
+  margin-left:0;
+  padding-left:0;
+  transform:none;
+}
+#home .hero-left{
+  padding-top:44px;
+}
+@media(max-width:650px){
+  #home .hero-left{padding-top:76px}
+}
+
+/* Collaborate route cards mirror the Home thread-card system */
+#collaborate .routes{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+#collaborate .route{
+  position:relative;
+  min-height:470px;
+  padding:34px 36px 42px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:transparent;
+  transition:background-color .2s ease,color .2s ease;
+}
+#collaborate .route:last-child{border-right:0}
+#collaborate .route:hover{
+  background:#eef3ff;
+}
+#collaborate .route .n{
+  display:block;
+  color:var(--blue);
+  font:500 10px var(--mono);
+  letter-spacing:.12em;
+}
+#collaborate .route h2{
+  margin:70px 0 24px;
+  font:600 30px/1.15 var(--display);
+  letter-spacing:-.025em;
+}
+#collaborate .route p{
+  font-size:14px;
+  line-height:1.85;
+  color:var(--muted);
+}
+#collaborate .route.primary{
+  background:var(--blue);
+}
+#collaborate .route.primary:hover{
+  background:#003ee6;
+}
+#collaborate .route.primary .n,
+#collaborate .route.primary h2,
+#collaborate .route.primary p{
+  color:#fff;
+}
+#collaborate .page-hero h1 .blue-title{
+  color:var(--blue);
+}
+.about-facts .fact a{
+  color:var(--blue);
+  text-decoration:none;
+}
+.about-facts .fact a:hover{
+  text-decoration:underline;
+}
+@media(max-width:1150px){
+  #collaborate .routes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #collaborate .route:nth-child(2n){border-right:0}
+}
+@media(max-width:650px){
+  #collaborate .routes{grid-template-columns:1fr}
+  #collaborate .route{border-right:0;min-height:auto}
+}
+
+
+/* v15 correction: align Home hero and reduce Collaborate route typography */
+#home .hero-main{
+  justify-content:flex-start;
+  padding:64px 64px 36px;
+}
+#home .hero .eyebrow{
+  margin:0 0 28px;
+}
+
+#collaborate .route{
+  min-height:330px;
+  padding:32px 28px 24px;
+}
+#collaborate .route h2{
+  margin:34px 0 14px;
+  font-family:'Syne',var(--display),sans-serif;
+  font-size:1.35rem;
+  line-height:1.18;
+  letter-spacing:0;
+}
+#collaborate .route p{
+  font-size:13px;
+  line-height:1.75;
+}
+#collaborate .route .n{
+  font-size:9px;
+  letter-spacing:.12em;
+}
+
+@media(max-width:900px){
+  #home .hero-main{
+    padding:64px 28px 60px;
+  }
+}
+@media(max-width:650px){
+  #home .hero-main{
+    padding:74px 24px 48px;
+  }
+  #collaborate .route{
+    min-height:270px;
+    padding:28px 24px;
+  }
+}
+
+
+/* v15 final refinements */
+@media(min-width:901px){
+  #home .hero-copy{
+    align-items:flex-start;
+    padding-top:92px;
+  }
+}
+
+#writing .writing-hero-main{
+  padding-bottom:38px;
+}
+#writing .writing-hero h1{
+  margin-bottom:20px;
+}
+#writing .writing-hero p{
+  margin-bottom:0;
+}
+#writing .writing-filters{
+  margin-top:0;
+}
+
+@media(max-width:900px){
+  #home .hero-copy{
+    align-items:flex-start;
+  }
+}
+
+
+#collaborate .page-hero h1 .title-line{
+  display:block;
+}
+#collaborate .page-hero h1 .title-line + .title-line{
+  margin-top:.08em;
+}
+
+
+/* Compact Home inquiry transition */
+#home .hero{
+  min-height:auto;
+}
+#home .hero-copy{
+  flex-direction:column;
+  padding-top:106px;
+  padding-bottom:12px;
+  line-height:1.75;
+}
+#home .compact-inquiry{
+  display:block;
+  border-bottom:1px solid var(--line);
+}
+#home .compact-inquiry .label{
+  padding:16px 24px;
+  border-right:0;
+  font:10px/1.5 var(--mono);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+#home .compact-inquiry + .thread-preview{
+  margin-top:0;
+}
+@media(max-width:900px){
+  #home .hero{
+    min-height:auto;
+  }
+  #home .hero-copy{
+    padding-top:40px;
+    padding-bottom:24px;
+  }
+}
+
+/* One consistent transition from primary-page descriptions to section rules */
+#threads .page-hero,
+#projects .page-hero,
+#about .page-hero,
+#collaborate .page-hero{
+  min-height:auto;
+  padding-bottom:48px;
+}
+#writing .writing-hero-main{
+  padding-bottom:48px;
+}
+#home .hero-main,
+#home .hero-copy{
+  padding-bottom:48px;
+}
+@media(max-width:900px){
+  #threads .page-hero,
+  #projects .page-hero,
+  #about .page-hero,
+  #collaborate .page-hero,
+  #writing .writing-hero-main,
+  #home .hero-main,
+  #home .hero-copy{
+    padding-bottom:40px;
+  }
+}
+
+
+
+/* Final filter and Thread 04 refinements */
+#projects .filters{padding:10px 32px;display:flex}
+#projects .filter-panel{display:block}
+#projects .filter-group{display:flex;gap:8px;flex-wrap:wrap}
+#projects .filter-btn{min-width:auto}
+.forming-list-right{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line);color:var(--ink);font-size:13px;line-height:1.6}
+.forming-list-right strong{display:block;margin-bottom:6px;color:var(--ink);font-size:13px;font-weight:500}
+.forming-list-right span{display:block}
+.thread-project-year{float:right;font:500 10px var(--mono);letter-spacing:.08em;color:var(--muted)}
+
+
+/* v16 final compact refinements */
+#collaborate .contact-strip>div{
+  padding:16px 18px;
+  min-height:104px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+#collaborate .contact-strip small{
+  margin-bottom:6px;
+}
+#collaborate .contact-strip a,
+#collaborate .contact-strip span{
+  line-height:1.35;
+}
+@media(max-width:900px){
+  #collaborate .contact-strip>div{min-height:auto;padding:16px 20px}
+}
+
+
+/* v16 final compact controls */
+#projects .filter-label,
+#projects .active-summary,
+#projects .reset,
+#projects .mobile-filter-toggle{
+  display:none !important;
+}
+#projects .filters{
+  padding:10px 32px;
+}
+#projects .filter-group{
+  margin:0;
+}
+#collaborate .contact-strip small{
+  margin-bottom:4px;
+}
+
+
+/* v16 updated project filter tabs */
+#projects .filter-btn{
+  width:auto;
+  min-width:0;
+  height:42px;
+  padding:0 20px;
+  font-size:10px;
+  letter-spacing:.1em;
+}
+#projects .filter-group{
+  gap:10px;
+}
+#projects .filters{
+  padding:10px 12px;
+}
+@media(max-width:600px){
+  #projects .filter-panel{display:block!important;width:100%}
+  #projects .filter-group{margin-top:0;gap:8px}
+  #projects .filter-btn{height:38px;padding:0 14px;font-size:9px}
+}
+
+
+/* v17 — Writing thumbnail images */
+.writing-thumb{
+  overflow:hidden;
+  padding:0;
+  background:#d8d5cf;
+}
+.writing-thumb img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+/* v18 — About portrait */
+.about-profile-image{
+  width:100%;
+  aspect-ratio:4/5;
+  min-height:440px;
+  display:block;
+  object-fit:cover;
+  object-position:center top;
+  border:1px solid var(--line);
+}
+@media(max-width:900px){
+  .about-profile-image{
+    max-width:480px;
+    min-height:0;
+  }
+}
+
+/* v20 — consistency update based on v18 */
+
+/* 1) Remove the green line before WRITING & RESEARCH */
+#writing .writing-kicker:before{
+  display:none;
+}
+
+/* 2) Match Writing description style to Projects */
+#writing .writing-hero p{
+  max-width:760px;
+  font-size:18px;
+  line-height:1.65;
+  color:var(--muted);
+  margin:30px 0 0;
+}
+
+/* 4) Writing nav hover/active = green, not blue */
+.nav a[href="#writing"]:hover,
+.nav a[href="#writing"].active{
+  color:#0b9c45;
+  background:#e8f8ee;
+}
+
+/* 5) Project filters should visually mirror Writing, but active state stays blue */
+#projects .filters{
+  position:sticky;
+  top:58px;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:16px 24px;
+  background:rgba(247,245,239,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+#projects .project-filters-label{
+  display:inline-block;
+  margin-right:10px;
+  font:9px var(--mono);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#999;
+}
+#projects .filter-panel{
+  display:block;
+  width:auto;
+}
+#projects .filter-group{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:0;
+}
+#projects .filter-btn{
+  width:auto;
+  min-width:0;
+  height:auto;
+  padding:8px 14px;
+  border:1px solid var(--line);
+  background:transparent;
+  font:8px var(--mono);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+#projects .filter-btn.on{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:#fff;
+}
+#projects .filter-btn:hover{
+  background:#eef3ff;
+  border-color:var(--blue);
+  color:var(--blue);
+}
+#projects .filter-btn.on:hover{
+  background:var(--blue);
+  color:#fff;
+}
+
+/* 6) Align Home "Four threads..." and both FILTER labels from the same left start */
+#home .compact-inquiry .label{
+  padding-left:24px;
+  padding-right:24px;
+}
+#projects .filters,
+#writing .writing-filters{
+  top:52px;
+  padding-left:24px;
+  padding-right:24px;
+}
+#writing .writing-filters-label,
+#projects .project-filters-label{
+  margin-left:0;
+}
+
+/* keep Writing filters as the green system */
+#writing .writing-filters{
+  gap:10px;
+}
+#writing .writing-filter{
+  padding:8px 14px;
+}
+#writing .writing-filter.active{
+  background:#17ca61;
+  border-color:#17ca61;
+  color:#06180d;
+}
+
+/* 3) About header spacing should match the rhythm of the other pages more closely */
+#about .page-hero{
+  min-height:auto;
+  padding-bottom:28px;
+}
+
+/* 7) About page uses the new horizontal B/W photo and project-like body typography */
+#about .about-editorial-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(320px,.58fr);
+  border-bottom:1px solid var(--line);
+}
+#about .about-editorial-copy{
+  padding:56px 58px 72px;
+}
+#about .about-copy-with-photo{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(340px,420px);
+  gap:44px;
+  align-items:start;
+}
+#about .about-copy-text p{
+  max-width:none;
+  margin:0 0 28px;
+  font-size:18px;
+  line-height:1.62;
+  color:var(--ink);
+}
+#about .about-profile-inline{
+  padding-top:0;
+}
+#about .about-profile-image{
+  width:100%;
+  aspect-ratio:16/10;
+  min-height:0;
+  display:block;
+  object-fit:cover;
+  object-position:center center;
+  border:1px solid var(--line);
+}
+
+/* side column closer to individual project-page metadata rhythm */
+#about .about-facts{
+  padding:56px 42px 56px;
+}
+#about .about-facts h2{
+  margin:0 0 18px;
+  font:500 10px var(--mono);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink);
+}
+#about .about-facts .fact{
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+  font-size:16px;
+  line-height:1.58;
+  color:var(--ink);
+}
+#about .about-facts .fact a{
+  color:var(--blue);
+  text-decoration:none;
+}
+#about .about-facts .fact a:hover{
+  text-decoration:underline;
+}
+
+/* Responsive adjustments */
+@media(max-width:1100px){
+  #about .about-copy-with-photo{
+    grid-template-columns:1fr;
+  }
+  #about .about-profile-inline{
+    max-width:640px;
+  }
+}
+@media(max-width:900px){
+  #projects .filters,
+  #writing .writing-filters{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  #home .compact-inquiry .label{
+    padding-left:18px;
+    padding-right:18px;
+  }
+  #projects .project-filters-label{
+    width:100%;
+    margin:0 0 2px;
+  }
+}
+
+/* v21 — About page aligned to the individual project-page layout */
+#about .about-editorial-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 360px;
+  border-bottom:1px solid var(--line);
+}
+
+#about .about-editorial-copy{
+  padding:5vw 46px 5vw;
+  max-width:none;
+}
+
+#about .about-copy-with-photo{
+  display:block;
+}
+
+#about .about-copy-text{
+  max-width:960px;
+}
+
+#about .about-copy-text p{
+  max-width:960px;
+  font-size:18px;
+  line-height:1.68;
+  color:var(--ink);
+  margin:0 0 28px;
+}
+
+#about .about-inline-photo{
+  margin:38px 0 42px;
+  max-width:960px;
+}
+
+#about .about-inline-photo-image{
+  display:block;
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  object-position:center center;
+  border:1px solid var(--line);
+}
+
+#about .about-editorial-side{
+  border-left:1px solid var(--line);
+}
+
+#about .about-facts{
+  padding:5vw 38px 5vw;
+}
+
+#about .about-facts h2{
+  margin:0 0 18px;
+  font:500 10px var(--mono);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+#about .about-facts .fact{
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+  font-size:16px;
+  line-height:1.58;
+  color:var(--ink);
+}
+
+#about .about-facts .fact a{
+  color:var(--blue);
+  text-decoration:none;
+}
+
+#about .about-facts .fact a:hover{
+  text-decoration:underline;
+}
+
+@media(max-width:1100px){
+  #about .about-editorial-grid{
+    grid-template-columns:1fr;
+  }
+  #about .about-editorial-side{
+    border-left:0;
+    border-top:1px solid var(--line);
+  }
+  #about .about-editorial-copy,
+  #about .about-facts{
+    padding:42px 24px 48px;
+  }
+}
+
+@media(max-width:700px){
+  #about .about-inline-photo{
+    margin:28px 0 34px;
+  }
+  #about .about-copy-text p{
+    font-size:17px;
+  }
+}
+
+/* v23 — About uses the exact individual-project body structure */
+
+/* Exact project-page column, spacing and typography */
+#about .project-layout{
+  grid-template-columns:minmax(0,1fr) 280px;
+}
+
+#about .project-side{
+  grid-column:2;
+  grid-row:1;
+  padding:36px 28px;
+  border-right:0;
+  border-left:1px solid var(--line);
+}
+
+#about .project-body{
+  grid-column:1;
+  grid-row:1;
+  padding:52px 64px;
+  max-width:none;
+}
+
+#about .project-body p{
+  max-width:760px;
+  margin:0 0 25px;
+  font-size:14px;
+  line-height:1.9;
+  color:var(--ink);
+}
+
+/* Horizontal portrait follows the same width as project prose/media */
+#about .about-project-photo{
+  width:100%;
+  max-width:760px;
+  margin:28px 0 32px;
+}
+
+#about .about-project-photo-image{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center center;
+  border:1px solid var(--line);
+}
+
+/* Sidebar follows project metadata scale */
+#about .project-side .about-facts{
+  padding:0;
+}
+
+#about .project-side .about-facts h2{
+  margin:0 0 16px;
+  font:500 9px var(--mono);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+#about .project-side .about-facts h2.education-title{
+  margin-top:0;
+  padding-top:48px;
+}
+
+#about .project-side .about-facts .fact{
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
+  line-height:1.55;
+  color:var(--ink);
+}
+
+#about .project-side .about-facts .fact a{
+  color:var(--blue);
+  text-decoration:none;
+}
+
+/* Match the transition from hero to body used on project pages */
+#about .page-hero{
+  min-height:auto;
+  padding-bottom:4vw;
+}
+
+/* Override every older About-only layout rule */
+#about .about-editorial-grid,
+#about .about-editorial-copy,
+#about .about-copy-with-photo,
+#about .about-copy-text,
+#about .about-profile-inline,
+#about .about-inline-photo{
+  all:unset;
+}
+
+@media(max-width:900px){
+  #about .project-layout{
+    grid-template-columns:1fr;
+  }
+
+  #about .project-side{
+    grid-column:1;
+    grid-row:1;
+    border-left:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  #about .project-body{
+    grid-column:1;
+    grid-row:2;
+    padding:44px 28px;
+  }
+}
+
+@media(max-width:600px){
+  #about .project-body{
+    padding:35px 22px;
+  }
+
+  #about .project-body p{
+    font-size:14px;
+    line-height:1.9;
+  }
+}
+
+/* v24 — Writing description and archive-header refinement */
+
+/* Match Projects page sub-description exactly */
+#writing .writing-hero p{
+  max-width:760px;
+  font-size:18px;
+  line-height:1.65;
+  margin:30px 0 0;
+  color:var(--muted);
+}
+
+/* Writing archive header removed from markup */
+
+/* v25 — Writing description exactly matches the final Projects description rule */
+#writing .writing-hero p{
+  max-width:930px;
+  margin:0;
+  font-size:15px;
+  line-height:1.8;
+  color:var(--muted);
+}
+
+/* v27 — Match the vertical space after Writing description to Projects */
+#writing .writing-hero-main{
+  padding-bottom:5vw;
+}
+
+@media(max-width:900px){
+  #writing .writing-hero-main{
+    padding-bottom:44px;
+  }
+}
+
+/* v33 — One shared card typography system across all primary sections */
+#home .thread-card h3,
+#threads .thread-band h2,
+#projects .project-card h2,
+#writing .writing-content h3,
+#collaborate .route h2{
+  font-family:var(--display);
+  font-size:1.35rem;
+  font-weight:600;
+  line-height:1.18;
+  letter-spacing:0;
+  color:var(--ink);
+}
+#home .thread-card p,
+#threads .thread-band p,
+#projects .project-card p,
+#writing .writing-content p,
+#collaborate .route p{
+  font-family:var(--body);
+  font-size:13px;
+  font-weight:400;
+  line-height:1.75;
+  color:var(--ink);
+}
+#collaborate .route.primary h2,
+#collaborate .route.primary p{
+  color:#fff;
+}
+#home .hero-copy,
+#home .position>div:last-child>p:first-child{
+  font-family:var(--body);
+  font-size:14px;
+  font-weight:400;
+  line-height:1.75;
+  color:var(--ink);
+}
+#home .hero-copy p{
+  margin:0 0 18px;
+}
+#home .hero-copy p:last-child{
+  margin-bottom:0;
+}
+#home .position-copy p{
+  font-family:var(--body);
+  font-size:14px;
+  font-weight:400;
+  line-height:1.75;
+  color:var(--ink);
+  margin:0 0 16px;
+}
+#home .position-copy .position-description,
+#home .position-copy .author-signature{
+  margin-bottom:0;
+}
+#home .position-copy .author-signature{
+  margin-top:0!important;
+}
+#home .position>div{
+  padding-bottom:52px;
+}
+#home .position-copy .position-quote{
+  font-family:var(--display);
+  font-weight:700;
+  margin-bottom:6px;
+}
+#home .position-copy .position-source{
+  display:block;
+  margin-bottom:24px;
+  font:500 9px/1.5 var(--mono);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--blue);
+  text-decoration:none;
+}
+#home .position-copy .position-source:hover{
+  color:var(--blue);
+  text-decoration:underline;
+}
+#threads .page-hero p,
+#projects .page-hero p,
+#writing .writing-hero p,
+#collaborate .page-hero p{
+  font-family:var(--body);
+  font-size:14px;
+  font-weight:400;
+  line-height:1.75;
+  color:var(--ink);
+}
+#home .actions .btn{
+  border-color:var(--line);
+  font:10px var(--mono);
+  letter-spacing:.12em;
+}
+#home .actions .btn.primary{
+  border-color:var(--ink);
+}
+.home-thread-status,
+#projects .project-status{
+  border-color:var(--line);
+}
+.nav a{
+  color:var(--ink);
+  font-weight:500;
+}
+
+/* v33 — Unified small metadata typography */
+#home .compact-inquiry .label,
+.eyebrow,
+#writing .writing-kicker,
+.home-thread-status,
+#threads .thread-status-line,
+#projects .project-status,
+#projects .project-card .project-card-copy>.card-top:last-child,
+#writing .writing-date,
+#writing .tag,
+#writing .writing-source,
+#writing .writing-section-head p,
+#about .project-side .about-facts h2,
+#collaborate .contact-strip small,
+.project-side dt,
+.project-nav small,
+footer{
+  font-family:var(--mono);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.12em;
+}
+#home .compact-inquiry .label,
+.eyebrow,
+#writing .writing-kicker,
+#threads .thread-status-line,
+#projects .project-card .project-card-copy>.card-top:last-child,
+#writing .writing-date,
+#writing .writing-source,
+#writing .writing-section-head p,
+#about .project-side .about-facts h2,
+#collaborate .contact-strip small,
+.project-side dt,
+.project-nav small,
+footer{
+  color:var(--muted);
+}
+.thread-no,
+#threads .thread-band .num,
+#projects .project-thread-label,
+#collaborate .route .n{
+  font-family:var(--mono);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.12em;
+  color:var(--blue);
+}
+#projects .project-filters-label,
+#writing .writing-filters-label{
+  display:none!important;
+}
+#projects .filters{
+  padding-left:64px;
+}
+#writing .writing-filters{
+  padding-left:60px;
+}
+@media(max-width:900px){
+  #projects .filters{padding-left:28px}
+  #writing .writing-filters{padding-left:60px}
+}
+@media(max-width:650px){
+  #projects .filters,
+  #writing .writing-filters{padding-left:24px}
+}
+#home .hero .eyebrow,
+#threads .page-hero .eyebrow,
+#projects .page-hero .eyebrow,
+#about .page-hero .eyebrow,
+#collaborate .page-hero .eyebrow,
+#writing .writing-kicker{
+  font-family:var(--mono)!important;
+  font-size:10px!important;
+  font-weight:500!important;
+  letter-spacing:.12em!important;
+  color:var(--muted)!important;
+}
+#projects .filter-btn,
+#projects .project-thread-label,
+#projects .project-status,
+#writing .writing-filter,
+#writing .tag,
+#writing .writing-source .type{
+  font-family:var(--mono);
+  font-size:9px;
+  font-weight:400;
+  letter-spacing:.1em;
+}
+#projects .filter-btn,
+#projects .project-status,
+#writing .writing-filter,
+#writing .tag{
+  color:var(--ink);
+}
+#projects .project-thread-label{
+  color:var(--blue);
+}
+#projects .filter-btn.on{
+  color:#fff;
+}
+#writing .writing-filter.active{
+  color:#06180d;
+}
+#writing .tag.thread,
+#writing .writing-source .type{
+  color:#10a74c;
+}
+#home .thread-no,
+#home .home-thread-status{
+  font-family:var(--mono);
+  font-size:9px;
+  font-weight:400;
+  letter-spacing:.1em;
+}
+#home .thread-no{
+  color:var(--blue);
+}
+#home .home-thread-status{
+  color:var(--ink);
+}
+#home .home-thread-status.forming{
+  color:var(--blue);
+}
+#home .hero .eyebrow,
+#threads .page-hero .eyebrow,
+#projects .page-hero .eyebrow,
+#about .page-hero .eyebrow,
+#collaborate .page-hero .eyebrow{
+  margin-bottom:24px!important;
+}
+#writing .writing-hero h1{
+  margin-top:24px;
+}
+#about .page-hero{
+  padding-bottom:32px;
+}
+#threads .page-hero,
+#projects .page-hero,
+#about .page-hero,
+#collaborate .page-hero,
+#writing .writing-hero-main{
+  padding-bottom:48px;
+}
+.forming-list-right{
+  border-top:0;
+}
+@media(min-width:901px){
+  #about .project-body{
+    padding-top:36px;
+  }
+  #project .project-layout{
+    grid-template-columns:minmax(0,1fr) 240px;
+  }
+}
+#threads .thread-band .num{
+  align-items:flex-start;
+  padding-top:43px;
+}
+#threads .thread-status-line.forming{
+  color:var(--blue);
+}
+#threads .thread-status-line.forming:before{
+  background:var(--blue);
+}
+#project .project-hero{
+  padding-left:64px;
+  padding-right:64px;
+}
+@media(max-width:900px){
+  #project .project-hero{
+    padding-left:28px;
+    padding-right:28px;
+  }
+}
+@media(max-width:600px){
+  #project .project-hero{
+    padding-left:24px;
+    padding-right:24px;
+  }
+}
+#collaborate .contact-strip a,
+#collaborate .contact-strip span{
+  font-size:14px;
+}
+.project-card .project-thumb{
+  position:relative;
+}
+.project-card .project-thumb:after{
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:rgba(0,71,255,.12);
+  opacity:0;
+  transition:opacity .2s ease;
+}
+.project-card:hover .project-thumb:after{
+  opacity:1;
+}
+#project .project-media{
+  border-top:0;
+}
+#project .project-media-controls{
+  width:92%;
+  margin:0 auto;
+  padding:8px 0;
+  justify-content:center;
+}
+#project .project-media-btn{
+  padding:2px 0;
+}
+#project .project-media-viewport .project-media-btn{
+  position:absolute;
+  z-index:2;
+  top:0;
+  bottom:0;
+  width:18%;
+  padding:0 18px;
+  color:rgba(17,17,17,.22);
+  font-size:18px;
+  background:transparent;
+  opacity:.65;
+  transition:opacity .2s ease,color .2s ease;
+}
+#project .project-media-viewport .project-media-btn:hover,
+#project .project-media-viewport .project-media-btn:focus-visible{
+  color:rgba(17,17,17,.42);
+  opacity:1;
+}
+#project .project-media-viewport .media-prev{
+  left:0;
+  text-align:left;
+}
+#project .project-media-viewport .media-next{
+  right:0;
+  text-align:right;
+  background:transparent;
+}
+#project .project-inquiry-label,
+#project .project-inquiry{
+  display:none;
+}
+#project .project-side .evidence{
+  grid-column:1 / -1;
+  width:100%;
+  max-width:none;
+  margin:24px 0 0;
+  padding-top:20px;
+}
+#project .project-side .evidence h3{
+  margin:0 0 10px;
+}
+#project .project-side .evidence a,
+#project .project-side .evidence span{
+  font-size:12px;
+  line-height:1.55;
+}
+.project-side dd.project-meta-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:9px;
+}
+.project-meta-tag{
+  display:inline-flex;
+  align-items:center;
+  padding:5px 9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:var(--ink);
+  font:500 10px/1.35 var(--body);
+}
+#project .project-sub{
+  font-family:var(--body);
+  font-size:14px;
+  font-weight:400;
+  line-height:1.75;
+  color:var(--ink);
+}
+#project .project-hero .back{
+  font-family:var(--mono);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.12em;
+  color:var(--muted);
+  padding-top:36px;
+}
+#project .project-nav a:first-child small:before{
+  content:'← ';
+}
+#project .project-nav a:last-child small:after{
+  content:' →';
+}
+#project .project-kicker{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  font-family:var(--mono);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.12em;
+  margin-top:24px;
+}
+#project .evidence h3,
+#project .connected{
+  font-family:var(--mono);
+  font-size:10px;
+  font-weight:500;
+  line-height:1.6;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.project-kicker-thread{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border:1px solid var(--blue);
+  color:var(--blue);
+}
+.project-kicker-context{
+  color:var(--blue);
+}
+.profile-link{color:inherit;text-decoration:none}
+.profile-link:hover{color:var(--blue)}
+#home .author-signature{
+  font-family:var(--mono)!important;
+  font-size:10px!important;
+  font-weight:500;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+@media(max-width:600px){
+  #threads .thread-band .num{
+    padding-top:37px;
+  }
+}
+@media(max-width:900px){
+  header{
+    height:auto;
+    min-height:52px;
+    align-items:stretch;
+  }
+  .brand,
+  .menu{
+    height:52px;
+  }
+  .nav.open{
+    position:static;
+    grid-column:1 / -1;
+    width:100%;
+    top:auto;
+  }
+  .nav a:last-child{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  /* Mobile reading order: primary narrative first, supporting facts second. */
+  #about .about-project-layout,
+  #project .project-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+  }
+  #about .about-project-body,
+  #project .project-body{
+    grid-column:1;
+    grid-row:1;
+  }
+  #about .about-project-side,
+  #project .project-side{
+    grid-column:1;
+    grid-row:2;
+    border-left:0;
+    border-right:0;
+    border-top:1px solid var(--line);
+    border-bottom:0;
+  }
+  #project .project-side > .evidence,
+  #project .project-side dl > .evidence{
+    grid-column:1 / -1;
+    width:auto;
+    max-width:none;
+    justify-self:stretch;
+  }
+}
+@media(max-width:900px){
+  /* Project facts remain a compact grid, while the sections beneath use
+     the complete mobile content width. */
+  #project .project-side{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    box-sizing:border-box;
+  }
+  #project .project-side > .evidence,
+  #project .project-side > .connected{
+    display:block !important;
+    grid-column:auto !important;
+    width:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+    box-sizing:border-box;
+  }
+  #project .project-side > .evidence a,
+  #project .project-side > .evidence span{
+    width:100% !important;
+    max-width:none !important;
+    box-sizing:border-box;
+  }
+}
+@media(max-width:600px){
+  /* Keep the stacked Home introduction compact on narrow screens. */
+  #home .position{
+    min-height:0 !important;
+    gap:0 !important;
+  }
+  #home .position > div{
+    min-height:0 !important;
+    height:auto !important;
+  }
+  #home .position > div:first-child{
+    padding-top:28px !important;
+    padding-bottom:18px !important;
+  }
+  #home .position-copy{
+    padding-top:12px !important;
+    padding-bottom:30px !important;
+  }
+  #home .position-copy .position-source{
+    margin-bottom:14px !important;
+  }
+}
+@media(max-width:900px){
+  .menu{
+    font-family:var(--mono);
+    font-size:10.5px;
+    font-weight:400;
+    letter-spacing:.12em;
+  }
+  main{
+    padding-top:36px!important;
+  }
+}
+</style>
+<style>
+/* Keep responsive page content below the expanded navigation. */
+@media (max-width: 900px) {
+  main {
+    padding-top: 36px !important;
+  }
+}
+</style>
+<!-- GA4: replace G-XXXXXXXXXX after consent requirements and property setup are confirmed. -->
+</head><body><a class="skip" href="#content">Skip to content</a><div class="site">
+<header><a class="brand" href="#home">Design the Rule</a><button aria-controls="nav" aria-expanded="false" class="menu"></button><nav aria-label="Primary" class="nav" id="nav"><a href="#home">Home</a><a href="#threads">Threads</a><a href="#projects">Projects</a><a href="#writing">Writing</a><a href="#about">About</a><a href="#collaborate">Collaborate</a></nav></header>
+<main id="content">
+<section class="page" id="home"><div class="hero contour"><div class="hero-main"><div class="eyebrow">An inquiry-led practice across systems, governance, and repair</div><h1>The systems that shape shared life were designed. <em>They can be made visible, tested, remade, and repaired.</em></h1><div class="actions"><a class="btn primary" href="#threads">Explore the inquiry →</a><a class="btn" href="#projects">Recent work</a></div></div><div class="hero-copy"><p>My practice follows how hidden systems become visible, how alternatives are built before institutions are ready, and how experiments can become governance infrastructure. It moves across art, design, civic technology, public institutions, and land—not to present finished answers, but to make questions visible, test what might be possible, and seed forms of shared life that can endure.&nbsp;Increasingly, the work is turning toward repair, stewardship, and what people and places ask us to sustain over time.</p></div></div>
+<div class="section-head compact-inquiry"><div class="label">Four threads · An evolving inquiry · Questions tested through practice.</div></div><div class="thread-preview" id="home-threads"></div>
+<div class="position"><div><h2>Who gets to set<br/>the rules for<br/>shared space?</h2></div><div class="position-copy"><p class="position-quote">“At the very least, we need to strive to understand the art of deep listening, practice patience, and explore unknown spaces.”</p><a class="position-source" href="https://www.designdecode.org/eunji-kang/" rel="noopener" target="_blank">— Eunji Kang, Design Decode ↗</a><p class="position-description">Since 2006, I have followed this question through art, design, civic technology, and governance infrastructure. This website is not a record of finished answers. It is a place to gather what the work has taught me, make the questions visible, and plant small seeds for what might be tested, cared for, or carried forward by others. The inquiry is still forming—now turning toward land, repair, stewardship, and the slower work of remaining accountable to people and places over time.</p><p class="author-signature">— <a class="profile-link" href="https://www.linkedin.com/in/eunjikangsin/" rel="noopener" target="_blank">Eunji Kang ↗</a> · Seoul &amp; London · 2026</p></div></div></section>
+<section class="page" id="threads"><div class="page-hero contour"><div class="eyebrow">Threads</div><h1>Four threads.<br/><span class="blue-title">An evolving inquiry.</span></h1><p>The work does not divide cleanly into methods or disciplines. It moves through four registers of the same inquiry: learning to see the forces shaping a system, building alternatives before institutions are ready, designing rules that can learn, and attending to what places require beyond institutional change.</p></div><div id="thread-bands"></div></section>
+<section class="page" id="projects"><div class="page-hero contour"><div class="eyebrow">Projects</div><h1>Work as evidence<br/>of <span class="blue-title">an inquiry</span></h1><p>Projects are not isolated case studies. Each is one point in a longer position being worked out across systems, prototypes, rules, and places.</p></div><div class="filters"><span class="project-filters-label">Filter</span><div class="filter-panel"><div class="filter-group" id="thread-filters"></div></div></div><div class="project-grid" id="project-grid"></div></section>
+<section class="page" id="project"><div id="project-view"></div></section>
+<section class="page" id="writing">
+<div class="writing-hero contour">
+<div class="writing-hero-main">
+<div class="writing-kicker">Writing &amp; research</div>
+<h1>Thinking in public,<br/><em>still unfolding</em></h1>
+<p>Essays, field notes, and research published here and elsewhere. Writing is where the work gets questioned — where a project becomes a position and a position becomes a question again.</p>
+</div>
+</div>
+<div aria-label="Writing filters" class="writing-filters">
+<span class="writing-filters-label">Filter</span>
+<button class="writing-filter active" data-writing-filter="all">All</button>
+<button class="writing-filter" data-writing-filter="onsite">On this site</button>
+<button class="writing-filter" data-writing-filter="external">Featured elsewhere</button>
+<button class="writing-filter" data-writing-filter="thread-01">Thread 01</button>
+<button class="writing-filter" data-writing-filter="thread-02">Thread 02</button>
+<button class="writing-filter" data-writing-filter="thread-03">Thread 03</button>
+<button class="writing-filter" data-writing-filter="thread-04">Thread 04</button>
+</div>
+<div class="writing-archive" id="writing-archive">
+<div class="writing-card coming-soon" data-writing-thread="thread-03" data-writing-type="onsite">
+<div class="writing-date">May 2026</div>
+<div class="writing-thumb"><img alt="Forming — upcoming writing" loading="lazy" src="images/projects/upcoming.jpg"/></div>
+<div class="writing-content">
+<h3>The city as an interface: what agentic governance actually means</h3>
+<p>The Civic Ledger is not a chatbot. It is an attempt to redesign the moment of negotiation between a citizen and a city — and what that redesign reveals about where governance has been failing.</p>
+<div class="tag-row"><span class="tag thread">Thread 03</span><span class="tag">Governance</span><span class="tag">AI</span></div>
+<div class="writing-source"><span>designtherule.com</span><span class="type">Featured · Coming soon</span></div>
+</div>
+</div>
+<div class="writing-card coming-soon" data-writing-thread="thread-04" data-writing-type="onsite">
+<div class="writing-date">Jan 2026</div>
+<div class="writing-thumb"><img alt="Forming — upcoming writing" loading="lazy" src="images/projects/upcoming.jpg"/></div>
+<div class="writing-content">
+<h3>What repair asks of governance: early notes from Kentucky</h3>
+<p>First observations from UnRavel LLC — what post-mining land requires institutionally, and why the governance tools we have were designed for growth rather than withdrawal.</p>
+<div class="tag-row"><span class="tag thread">Thread 04</span><span class="tag">Repair</span><span class="tag">Field note</span></div>
+<div class="writing-source"><span>designtherule.com</span><span class="type">Featured · Coming soon</span></div>
+</div>
+</div>
+<a class="writing-card" data-writing-thread="thread-03" data-writing-type="external" href="https://drive.google.com/file/d/16hedASLkzteYbeJ_5lTEkEAbjl_6LzVx/view" rel="noopener" target="_blank">
+<div class="writing-date">2024</div>
+<div class="writing-thumb"><img alt="Keywords 2024: Choosing Attention Before Direction thumbnail" loading="lazy" src="images/writing/keywords-2024-choosing-attention-before-direction.jpg"/></div>
+<div class="writing-content">
+<h3>Keywords 2024: Choosing Attention Before Direction</h3>
+<p>A reflective text on the language that shaped the year and the conditions under which attention becomes a form of direction.</p>
+<div class="tag-row"><span class="tag thread">Thread 03</span><span class="tag">Reflection</span><span class="tag">Keywords</span></div>
+<div class="writing-source"><span>Google Drive</span><span class="type">Publication ↗</span></div>
+</div>
+</a>
+<a class="writing-card" data-writing-thread="thread-01" data-writing-type="external" href="https://provocations.darkmatterlabs.org/breaking-the-silos-through-participatory-systems-mapping-fccf9c2d01ab" rel="noopener" target="_blank">
+<div class="writing-date">2021</div>
+<div class="writing-thumb"><img alt="Breaking the Silos through Participatory Systems Mapping thumbnail" loading="lazy" src="images/writing/breaking-the-silos-through-participatory-systems-mapping.jpg"/></div>
+<div class="writing-content">
+<h3>Breaking the Silos through Participatory Systems Mapping</h3>
+<p>How participatory mapping can make hidden relationships visible and create a shared basis for institutional action.</p>
+<div class="tag-row"><span class="tag thread">Thread 01</span><span class="tag">Systems mapping</span><span class="tag">Participation</span></div>
+<div class="writing-source"><span>Dark Matter Labs</span><span class="type">Featured elsewhere ↗</span></div>
+</div>
+</a>
+<a class="writing-card" data-writing-thread="thread-04" data-writing-type="external" href="https://drive.google.com/file/d/1p8zc54PlI2ns8nNIFUwfK8K2ayax62MS/view" rel="noopener" target="_blank">
+<div class="writing-date">2016</div>
+<div class="writing-thumb"><img alt="Thoughts on the People and Places of South Africa thumbnail" loading="lazy" src="images/writing/thoughts-on-the-people-and-places-of-south-africa.jpg"/></div>
+<div class="writing-content">
+<h3>Thoughts on the People and Places of South Africa</h3>
+<p>A visual ethnography of people, place, everyday systems, and the questions that emerge through situated observation.</p>
+<div class="tag-row"><span class="tag thread">Thread 04</span><span class="tag">Visual ethnography</span><span class="tag">Place</span></div>
+<div class="writing-source"><span>Google Drive</span><span class="type">Visual publication ↗</span></div>
+</div>
+</a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://drive.google.com/file/d/1E6a8TV3diSxBmVSpQ6bC8JQ4Va4Abxd1/view" rel="noopener" target="_blank"><div class="writing-date">2020</div><div class="writing-thumb"><img alt="Asia Young Activist Research Fellowship Playbook thumbnail" loading="lazy" src="images/writing/asia-young-activist-research-fellowship-playbook.jpg"/></div><div class="writing-content"><h3>Asia Young Activist Research Fellowship Playbook</h3><p>A practical record of the fellowship methodology, learning structure, and tools developed with young activist-researchers.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag">Playbook</span><span class="tag">Youth research</span></div><div class="writing-source"><span>Google Drive</span><span class="type">Publication ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-03" data-writing-type="external" href="https://provocations.darkmatterlabs.org/re-permissioning-the-city-unlocking-cities-growing-underutilised-spatial-assets-for-an-emergent-1550997714a4" rel="noopener" target="_blank"><div class="writing-date">2023</div><div class="writing-thumb"><img alt="Re:Permissioning the City — Unlocking cities’ growing underutilised spatial assets for an emergent civic economy thumbnail" loading="lazy" src="images/writing/re-permissioning-the-city-unlocking-cities-growing-underutilised-spatial-assets-for-an-emergent-civic-economy.jpg"/></div><div class="writing-content"><h3>Re:Permissioning the City — Unlocking cities’ growing underutilised spatial assets for an emergent civic economy</h3><p>Dark Matter Labs writing on permissioning, underused urban assets, and emerging civic economies.</p><div class="tag-row"><span class="tag thread">Thread 03</span><span class="tag">Permissioning</span></div><div class="writing-source"><span>Dark Matter Labs</span><span class="type">Blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-03" data-writing-type="external" href="https://provocations.darkmatterlabs.org/creating-new-possibilities-to-make-human-e-cities-governance-in-the-digital-age-3bb648727967" rel="noopener" target="_blank"><div class="writing-date">2019</div><div class="writing-thumb"><img alt="Creating new possibilities to make human(e) cities — governance in the digital age thumbnail" loading="lazy" src="images/writing/creating-new-possibilities-to-make-human-e-cities-governance-in-the-digital-age.jpg"/></div><div class="writing-content"><h3>Creating new possibilities to make human(e) cities — governance in the digital age</h3><p>Writing on humane urban governance and the changing relationship between civic systems and technology.</p><div class="tag-row"><span class="tag thread">Thread 03</span><span class="tag">Governance</span></div><div class="writing-source"><span>Dark Matter Labs</span><span class="type">Blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-04" data-writing-type="external" href="https://medium.com/dml-korea/%ED%8A%B8%EB%9E%9C%EC%8A%A4-%EB%A1%9C%EC%BB%AC%EB%A6%AC%ED%8B%B0%EB%A1%9C-%EB%8B%A4%EC%8B%9C-%EA%B7%B8%EB%A6%AC%EB%8A%94-%EC%82%B6%EC%9D%98-%EC%A7%80%ED%98%95%EB%8F%84-a3a2e0fb044a" rel="noopener" target="_blank"><div class="writing-date">2020–22</div><div class="writing-thumb"><img alt="Redefining geography of living through Translocality thumbnail" loading="lazy" src="images/writing/redefining-geography-of-living-through-translocality.jpg"/></div><div class="writing-content"><h3>Redefining geography of living through Translocality</h3><span class="original-title" lang="ko">‘트랜스 로컬리티’로 다시 그리는 ‘삶의 지형도’</span><p>Part of the Dark Matter Labs Korea writing series.</p><div class="tag-row"><span class="tag thread">Thread 04</span><span class="tag language">Korean · 한국어</span></div><div class="writing-source"><span>Medium · DML Korea</span><span class="type">Korean blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-03" data-writing-type="external" href="https://medium.com/dml-korea/%ED%8F%AC%EC%9A%A9%EC%A0%81-%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%8B%9C%ED%8B%B0%EC%99%80-%EB%AA%A8%EB%B9%8C%EB%A6%AC%ED%8B%B0-%EA%B8%B0%EC%88%A0-79c9ea34af9" rel="noopener" target="_blank"><div class="writing-date">2020–22</div><div class="writing-thumb"><img alt="Inclusive Smart City and Mobility Technology thumbnail" loading="lazy" src="images/writing/inclusive-smart-city-and-mobility-technology.jpg"/></div><div class="writing-content"><h3>Inclusive Smart City and Mobility Technology</h3><span class="original-title" lang="ko">포용적 스마트시티와 모빌리티 기술</span><p>Part of the Dark Matter Labs Korea writing series.</p><div class="tag-row"><span class="tag thread">Thread 03</span><span class="tag language">Korean · 한국어</span></div><div class="writing-source"><span>Medium · DML Korea</span><span class="type">Korean blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://medium.com/dml-korea/%EC%9C%A0%EB%8B%88%EC%BD%98%EC%97%90%EC%84%9C-%EC%8B%9C%EB%AF%BC-%EC%8B%A4%ED%97%98%EC%9C%BC%EB%A1%9C-8fb07db54779" rel="noopener" target="_blank"><div class="writing-date">2020–22</div><div class="writing-thumb"><img alt="From Unicorn to Citizen Experiment thumbnail" loading="lazy" src="images/writing/from-unicorn-to-citizen-experiment.jpg"/></div><div class="writing-content"><h3>From Unicorn to Citizen Experiment</h3><span class="original-title" lang="ko">유니콘에서 시민 실험으로</span><p>Part of the Dark Matter Labs Korea writing series.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag language">Korean · 한국어</span></div><div class="writing-source"><span>Medium · DML Korea</span><span class="type">Korean blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://medium.com/dml-korea/%EB%8F%84%EC%8B%9C-%EB%AC%B8%EC%A0%9C%EC%97%90%EC%84%9C-%EB%8F%84%EC%8B%9C-%EB%AF%B8%EC%85%98%EC%9C%BC%EB%A1%9C-civic-sensemaking-ef5322adaf6a" rel="noopener" target="_blank"><div class="writing-date">2020–22</div><div class="writing-thumb"><img alt="From Urban Challenges to Urban Mission thumbnail" loading="lazy" src="images/writing/from-urban-challenges-to-urban-mission.jpg"/></div><div class="writing-content"><h3>From Urban Challenges to Urban Mission</h3><span class="original-title" lang="ko">도시 문제에서 도시 미션으로</span><p>Part of the Dark Matter Labs Korea writing series.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag language">Korean · 한국어</span></div><div class="writing-source"><span>Medium · DML Korea</span><span class="type">Korean blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-04" data-writing-type="external" href="https://medium.com/dml-korea/21%EC%84%B8%EA%B8%B0%EC%9D%98-%EC%9D%BC-1-%EA%B0%80%EC%A0%9C-f540664df9dc" rel="noopener" target="_blank"><div class="writing-date">2020–22</div><div class="writing-thumb"><img alt="Why We Need to Rethink About the Future of Work thumbnail" loading="lazy" src="images/writing/why-we-need-to-rethink-about-the-future-of-work.jpg"/></div><div class="writing-content"><h3>Why We Need to Rethink About the Future of Work</h3><span class="original-title" lang="ko">21세기의 일: 우리가 일의 미래에 대해 논의해야 하는 이유</span><p>Part of the Dark Matter Labs Korea writing series.</p><div class="tag-row"><span class="tag thread">Thread 04</span><span class="tag language">Korean · 한국어</span></div><div class="writing-source"><span>Medium · DML Korea</span><span class="type">Korean blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-04" data-writing-type="external" href="https://medium.com/dml-korea/%ED%9C%B4%EB%A8%BC-%EC%9B%8C%ED%84%B0-%EA%B7%B8%EB%A6%AC%EB%93%9C%EB%A5%BC-%ED%96%A5%ED%95%9C-%EC%83%81%EC%83%81-%EA%B8%B0%ED%9B%84%EB%B3%80%ED%99%94-%EB%8C%80%EC%9D%91%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A7%80%EC%86%8D%EA%B0%80%EB%8A%A5%ED%95%9C-%EC%88%98%EC%9E%90%EC%9B%90-%EC%8B%9C%EC%8A%A4%ED%85%9C-02-a066987ce3ed" rel="noopener" target="_blank"><div class="writing-date">2020–22</div><div class="writing-thumb"><img alt="Imagining the Human-Water Grid: Building a Sustainable Water Resource System in Response to Climate Crisis 01 &amp; 02 thumbnail" loading="lazy" src="images/writing/imagining-the-human-water-grid-building-a-sustainable-water-resource-system-in-response-to-climate-crisis-01-02.jpg"/></div><div class="writing-content"><h3>Imagining the Human-Water Grid: Building a Sustainable Water Resource System in Response to Climate Crisis 01 &amp; 02</h3><span class="original-title" lang="ko">휴먼-워터 그리드를 향한 상상: 기후위기에 대응하는 지속가능한 수자원 시스템 02</span><p>Part of the Dark Matter Labs Korea writing series.</p><div class="tag-row"><span class="tag thread">Thread 04</span><span class="tag language">Korean · 한국어</span></div><div class="writing-source"><span>Medium · DML Korea</span><span class="type">Korean blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://medium.com/@Colourincity/how-do-we-make-things-together-6f21b549624f" rel="noopener" target="_blank"><div class="writing-date">2017</div><div class="writing-thumb"><img alt="How do we make things together? thumbnail" loading="lazy" src="images/writing/how-do-we-make-things-together.jpg"/></div><div class="writing-content"><h3>How do we make things together?</h3><p>From the Colour-in City writing series.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag">Co-creation</span></div><div class="writing-source"><span>Colour-in City</span><span class="type">Blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-01" data-writing-type="external" href="https://medium.com/@Colourincity/making-data-meaningful-3a7066f0d3b2" rel="noopener" target="_blank"><div class="writing-date">2017</div><div class="writing-thumb"><img alt="Making data meaningful thumbnail" loading="lazy" src="images/writing/making-data-meaningful.jpg"/></div><div class="writing-content"><h3>Making data meaningful</h3><p>From the Colour-in City writing series.</p><div class="tag-row"><span class="tag thread">Thread 01</span><span class="tag">Data</span></div><div class="writing-source"><span>Colour-in City</span><span class="type">Blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://medium.com/@Colourincity/hey-there-is-this-a-good-time-for-a-chat-549e6cc5f88c" rel="noopener" target="_blank"><div class="writing-date">2017</div><div class="writing-thumb"><img alt="Hey there! Is this a good time for a chat? thumbnail" loading="lazy" src="images/writing/hey-there-is-this-a-good-time-for-a-chat.jpg"/></div><div class="writing-content"><h3>Hey there! Is this a good time for a chat?</h3><p>From the Colour-in City writing series.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag">Conversational interface</span></div><div class="writing-source"><span>Colour-in City</span><span class="type">Blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://medium.com/@Colourincity/design-makes-us-human-and-it-starts-with-a-story-fcab1b32bbd3" rel="noopener" target="_blank"><div class="writing-date">2017</div><div class="writing-thumb"><img alt="Design makes us human. And it starts with a story… thumbnail" loading="lazy" src="images/writing/design-makes-us-human-and-it-starts-with-a-story.jpg"/></div><div class="writing-content"><h3>Design makes us human. And it starts with a story…</h3><p>From the Colour-in City writing series.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag">Storytelling</span></div><div class="writing-source"><span>Colour-in City</span><span class="type">Blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://medium.com/@Colourincity/towards-a-process-of-well-being-efbbdfaf8bcd" rel="noopener" target="_blank"><div class="writing-date">2017</div><div class="writing-thumb"><img alt="Towards a process of (well)being thumbnail" loading="lazy" src="images/writing/towards-a-process-of-well-being.jpg"/></div><div class="writing-content"><h3>Towards a process of (well)being</h3><p>From the Colour-in City writing series.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag">Wellbeing</span></div><div class="writing-source"><span>Colour-in City</span><span class="type">Blog ↗</span></div></div></a>
+<a class="writing-card" data-writing-thread="thread-02" data-writing-type="external" href="https://medium.com/@Colourincity/service-design-and-the-city-d12ef75dba12" rel="noopener" target="_blank"><div class="writing-date">2017</div><div class="writing-thumb"><img alt="Service design and the city thumbnail" loading="lazy" src="images/writing/service-design-and-the-city.jpg"/></div><div class="writing-content"><h3>Service design and the city</h3><p>From the Colour-in City writing series.</p><div class="tag-row"><span class="tag thread">Thread 02</span><span class="tag">Service design</span></div><div class="writing-source"><span>Colour-in City</span><span class="type">Blog ↗</span></div></div></a>
+</div>
+<div class="writing-empty" id="writing-empty">No writing matches this filter.</div>
+</section>
+<section class="page article-page" id="article">
+<div id="article-view"></div>
+</section>
+<section class="page" id="about">
+<div class="page-hero contour">
+<div class="eyebrow">About · <a class="profile-link" href="https://www.linkedin.com/in/eunjikangsin/" rel="noopener" target="_blank">Eunji Kang</a></div>
+<h1><span class="title-line">A practice at the</span><span class="title-line blue-title">edge of design</span></h1>
+</div>
+<div class="project-layout about-project-layout"><aside class="project-side about-project-side"><div class="about-facts">
+<h2>Positions &amp; recognition</h2>
+<div class="fact">2026 · Nominated, Edge 50</div>
+<div class="fact">2025 · World Government Summit, Dubai</div>
+<div class="fact">2021 · Bloomberg Mayors Challenge — Top 50</div>
+<div class="fact">2019– · Director, Dark Matter Laboratories Korea / Mission Lead, Civic Systems, Dark Matter Laboratories Global</div>
+<div class="fact">2019–2020 · Advisory Board Member, Seoul Metropolitan Government</div>
+<div class="fact">Visiting or guest lecturer at Goldsmiths, RCA, RMIT, AA School, Open University, and the School of System Change</div>
+<h2 class="education-title">Selected conversations</h2>
+<div class="fact"><a href="https://apolitical.co/en/articles/the-permissionless-city-a-platform-reimagining-licensing" rel="noopener" target="_blank">2026 · Apolitical — The Permissionless City ↗</a></div>
+<div class="fact"><a href="https://apolitical.co/en/events/jun-2026-creating-safe-space-for-new-ideas-in-a-risk-averse-culture" rel="noopener" target="_blank">2026 · Creating Safe Space for New Ideas in a Risk-Averse Culture ↗</a></div>
+<div class="fact"><a href="https://www.khaleejtimes.com/uae/uae-sensor-backed-clams-five-minute-permits-among-govt-innovations-showcased-in-dubai" rel="noopener" target="_blank">2025 · World Government Summit coverage ↗</a></div>
+<div class="fact"><a href="https://bloombergcities.jhu.edu/news/city-putting-its-people-charge-public-space" rel="noopener" target="_blank">2024 · Bloomberg Cities ↗</a></div>
+<div class="fact"><a href="https://www.designdecode.org/eunji-kang/" rel="noopener" target="_blank">2023 · Design Decode ↗</a></div>
+<div class="fact"><a href="https://digitalchosun.dizzo.com/site/data/html_dir/2022/09/15/2022091580958.html" rel="noopener" target="_blank">2022 · Digital Chosun — Rethinking Cities’ Tangible and Intangible Infrastructure ↗</a></div>
+<h2 class="education-title">Education</h2>
+<div class="fact">2012 · MA Design: Critical Practice (Distinction), Goldsmiths</div>
+<div class="fact">2006 · BFA Fine Arts (First Class Honours), Korea National University of Arts</div>
+</div></aside><article class="project-body about-project-body"><p>For the first years of my career, “I would prefer not to” was quietly becoming my position. I entered design through the work the industry most readily offered: publishing, advertising, branding, and communication in support of sales. I learned how to make things clearer, more desirable, and easier to consume, but became increasingly uneasy with design as a supporting function for mass production and consumerism. The project ended at delivery, while its social and ecological consequences continued beyond the designer’s responsibility. I began asking whether design could do more than improve what already existed — whether it could question what should be produced, how value was defined, and the rules shaping the work in the first place.</p><div class="about-project-photo"><img alt="Black and white portrait of Eunji Kang" class="about-project-photo-image" loading="eager" src="images/about-eunji-kang-bw.jpg"/></div><p>Around 2015, while working independently in London, I encountered the wider <a href="https://www.project00.cc" rel="noopener" target="_blank">Project 00</a> community and a group of remarkable individuals working at the edges of design, systems, and institutional change. That encounter gave organisational form to questions I had already been carrying. Could design become more than a commercial supporting function — a way of thinking, a framework for collective sense-making, and a means of shaping the conditions in which different futures become possible? <a href="https://darkmatterlabs.org" rel="noopener" target="_blank">Dark Matter Labs</a> became the most important setting in which I could test those questions, first through the London practice and later through the opportunity to establish and shape a locally rooted entity in <a href="https://kr.darkmatterlabs.org" rel="noopener" target="_blank">South Korea</a>. Building the organisation — its missions, relationships, language, and economic reality — became part of the design work itself.</p><p>That inquiry is still forming. My practice has moved from visual communication into systems research, civic technology, and governance infrastructure, and is now turning toward repair, stewardship, and long-term transition. I am especially interested in micro-cities, technologies designed for civic value rather than efficiency alone, and small conditions at the edge of dominant systems that might seed deeper change. I no longer think design’s value lies mainly in producing answers. Its deeper role may be to enter early enough that value, participation, and the rules themselves can still be questioned — and to stay long enough to help fragile possibilities endure.</p></article></div>
+</section>
+<section class="page" id="collaborate"><div class="page-hero contour"><div class="eyebrow">Collaborate · Commission · Connect</div><h1><span class="title-line">Let’s work on</span><span class="title-line blue-title">something that matters</span></h1><p>I work with cities, public institutions, foundations, research organisations, and technology teams on questions that do not fit neatly within one discipline or mandate. The most useful collaborations create room to see a system differently, test another arrangement, build collective capability, or develop governance infrastructure that can learn from practice.</p></div><div class="contact-strip"><div><small>Connect on LinkedIn</small><a href="https://www.linkedin.com/in/eunjikangsin/" rel="noopener" target="_blank">Connect with me on LinkedIn ↗</a></div><div><small>Personal email</small><a href="mailto:eunjikangsin@gmail.com">eunjikangsin@gmail.com</a></div><div><small>Schedule</small><span><a href="https://calendar.app.google/ntZXy7t3ZHaZbUhp9" target="_blank" rel="noopener">Schedule a conversation · 30 minutes ↗</a></span></div></div><div class="routes"><div class="route"><div class="n">01</div><h2>Commission a project</h2><p>For institutions or organisations that need help framing a difficult problem, developing a practical direction, or building a new civic or organisational proposition.</p></div><div class="route"><div class="n">02</div><h2>Research partnership</h2><p>For universities, foundations, public institutions, and mission-led organisations exploring systems change, governance, public infrastructure, or long-term transition.</p></div><div class="route"><div class="n">03</div><h2>Speaking &amp; teaching</h2><p>For lectures, workshops, teaching, facilitation, and programme contributions focused on systems practice, civic technology, governance, and design.</p></div><div class="route primary"><div class="n">04 · Primary route</div><h2>Civic technology</h2><p>For partnerships around permissioning, deliberation, identity, evidence, agentic AI, and open protocols designed to support public judgment rather than replace it.</p></div></div></section>
+</main><footer><div><div><a class="profile-link" href="https://www.linkedin.com/in/eunjikangsin/" rel="noopener" target="_blank">Eunji Kang</a> · © 2026 · Last updated July 2026</div><div class="footer-rights">Selected original work: CC BY-NC 4.0. Partner and third-party rights reserved.</div></div><div>London · <a href="https://en.wikipedia.org/wiki/Pyeongtaek" rel="noopener" target="_blank">Pyeongtaek</a> · <a href="https://en.wikipedia.org/wiki/Jenkins%2C_Kentucky" rel="noopener" target="_blank">Jenkins</a></div></footer></div>
+<div class="privacy" id="privacy">This prototype reserves a place for privacy-conscious Google Analytics 4. Analytics remains disabled until a property ID and appropriate consent configuration are added.<br/><button id="privacy-close">Close</button></div>
+<script>
+const projects=[{"slug": "seeing-unemployment-as-a-system", "title": "Seeing Unemployment as a System", "subtitle": "Jobs were visible. The forces shaping them were not.", "body": ["Dark Matter Labs worked with UNDP Bhutan and the Royal Government of Bhutan to examine youth unemployment beyond the conventional explanation of mismatched labour supply and demand. Interviews pointed instead to an interlocking system: cultural stigma around blue-collar work, institutional silos, weak information flows between employers and job-seekers, and expectations about public-sector employment carried across generations. Initially commissioned to visualise the research, I led the systems-map and intervention-framework design, translating interview material through causal-loop analysis, Kumu mapping, and collective sense-making into a shared account of how these pressures reinforced one another.", "The work shifted the inquiry from identifying a single root cause to recognising recurring system friction points — places where short-term responses reproduced the conditions they were meant to resolve. This opened a practice of looking for pattern before prescription, while leaving a harder question unresolved: once institutions can see the dynamics they collectively produce, what gives them the authority and capacity to act across the boundaries that created them?"], "thread": "01", "thread_name": "Making the invisible visible", "type": "Mapping", "location": "Bhutan", "year": "2020", "meta": {"Year": "2020", "Funder": "UNDP Bhutan · Royal Government of Bhutan", "My role": "Systems map and intervention framework design lead · Causal-loop and Kumu mapping · Sense-making facilitation", "Location": "Bhutan", "Tags": "Systems mapping · Youth unemployment · Institutional silos · Pattern recognition · Intervention framework", "Outputs": "System friction-point cards · Youth unemployment systems map · Intervention framework · Contribution to the Systemic Portfolio-Based Approach report"}, "evidence": [{"label": "Intelligence Report: Systems Mapping of Youth Unemployment", "url": "https://www.bt.undp.org/content/bhutan/en/home/library/intelligenc-report-systems-approach-to-youth-unemployment-in-bhutan.html"}, {"label": "Breaking the Silos through Participatory Systems Mapping (Medium)", "url": "https://provocations.darkmatterlabs.org/breaking-the-silos-through-participatory-systems-mapping-fccf9c2d01ab?gi=3a57c4332e7c"}, {"label": "further materials available on request", "url": ""}], "status": "completed", "connected": [], "thumb": "images/projects/seeing-unemployment-as-a-system.jpg"}, {"slug": "data-storytelling-facts-into-emotions", "title": "Data Storytelling: Facts into Emotions", "subtitle": "Numbers can describe a pattern. A story can make its consequences felt.", "body": ["This was not a single commission but a practice developed across several years of research, visual communication, and public-service design. Again and again, institutions had evidence that failed to travel: statistics established scale but rarely changed how a problem was understood. I developed a three-part practice — Understanding, Measuring, and Making — to connect structural evidence with lived experience through maps, visual narratives, and interactive forms.", "The clearest expression was Beneath the Surface, developed through Innovation Unit’s Prevention Matters programme. A national statistic about ageing became more legible when placed beside the life of Margaret, 83: the statistic gave her story scale, while her story gave the statistic consequence. The unresolved challenge was ethical as much as communicative — how can public knowledge be made felt without sentimentalising a person or reducing one life to evidence for someone else’s argument?"], "thread": "01", "thread_name": "Making the invisible visible", "type": "Research", "location": "London", "year": "2010–2016", "meta": {"Year": "2010–2016", "Funder": "Innovation Unit (Prevention Matters programme) and other clients across the practice period", "My role": "Methodology and concept design · Data-storytelling practice development · Visual narrative and interaction design", "Location": "London, UK", "Tags": "Data storytelling · Visualisation · Public knowledge · Ethnography · Emotional evidence", "Outputs": "Data-storytelling methodology · Beneath the Surface interactive platform · Visual narratives · Ethnographic case study"}, "evidence": [{"label": "Data Storytelling (cargocollective)", "url": "https://cargocollective.com/datastorytellingv1/Data-storytelling"}, {"label": "Storytelling with Numbers (cargocollective)", "url": "https://cargocollective.com/eunjikang/Storytelling-with-numbers"}, {"label": "Innovation Unit — Prevention Matters       further materials available on request", "url": ""}], "status": "completed", "connected": [], "thumb": "images/projects/data-storytelling-facts-into-emotions.jpg"}, {"slug": "iot-visual-language-making-new-technology-visible", "title": "IoT Visual Language: Making New Technology Visible", "subtitle": "Connected systems were expanding. Their rules remained unreadable.", "body": ["By 2016, cities were filling with connected devices, sensors, and invisible exchanges of data, but there was no shared language through which people could understand what these systems were doing around them. Commissioned independently by Future Cities Catapult, I used the Highway Code as a precedent for civic legibility, mapped how connected devices communicated, and prototyped three zone types — Create, Disrupt, and Grow — which were tested with citizens.", "The project reframed visual communication as functional infrastructure rather than explanation. A sign can expose the rules, permissions, and consequences embedded in a system and make them available for public scrutiny. Yet visibility is not agency: understanding that data is being collected does not create power to influence what happens next. The work therefore opened a question that later governance projects would pursue — what participation, consent, and accountability must follow once an invisible rule can finally be seen?"], "thread": "01", "thread_name": "Making the invisible visible", "type": "Prototype", "location": "London", "year": "2016", "meta": {"Year": "2016", "Commissioned by": "Future Cities Catapult — independent commission", "Location": "London, UK", "Tags": "IoT · Visual language · Urban systems · Civic legibility · Smart cities", "Outputs": "IoT visual sign system · Create / Disrupt / Grow zones · Citizen testing · Provocation publication"}, "evidence": [{"label": "Data Storytelling", "url": "https://cargocollective.com/datastorytellingv1"}, {"label": "Visualising Systems", "url": "https://cargocollective.com/visualisingsystems"}], "status": "completed", "connected": [], "thumb": "images/projects/iot-visual-language-making-new-technology-visible.jpg"}, {"slug": "civic-capital-making-civic-value-legible", "title": "Civic Capital: Making Civic Value Legible", "subtitle": "Cities hold far more value than they know how to recognise.", "body": ["Working within Dark Matter Labs alongside the McConnell Foundation, Community Foundations of Canada, MaRS, and Evergreen, the research asked what it would mean to recognise land, ecological systems, community relationships, and future capacities as genuine civic capital. As a supporting design researcher, I synthesised and visualised 200–300 global case studies, looking for the structures beneath what initially appeared to be unrelated financial innovations.", "Four recurring patterns emerged — Future-Oriented Finance, Systems Financing, Transparent Governance, and Democratised Finance — mapped across land, natural, built, connective, and future assets. The work made visible how financial systems determine what becomes investable and governable, but also exposed a limit: recognition does not redistribute value. Once institutions learn to see care, stewardship, and ecological regeneration as assets, what would make them reorganise investment around what they have finally recognised?"], "thread": "01", "thread_name": "Making the invisible visible", "type": "Research", "location": "Canada", "year": "2018–2022", "meta": {"Year": "2018–2022", "Funder": "McConnell Foundation · Future Cities Canada", "My role": "Supporting design researcher · Research synthesis · Visualisation", "Location": "Canada (including Wasan Island retreat)", "Tags": "Civic finance · Public value · Systems research · Visualisation · Institutional innovation", "Outputs": "Building Civic Capital report · Global case-study synthesis · Four-pattern framework · Civic Capital Lab"}, "evidence": [{"label": "DML project page", "url": "https://darkmatterlabs.org/feed/civic-capital"}, {"label": "Building Civic Capital report", "url": "https://uploads-ssl.webflow.com/5ddbd6d8c8721f339f8284ef/5ea18eb53e44c4667e1cfebf_0411_Building%20Civic%20Capital%20(compressed).pdf"}, {"label": "Civic Capital website", "url": "https://www.civic.capital/"}, {"label": "Evergreen introduction", "url": "https://evergreen.ca/resource-hub/resources/introducing-the-civic-capital-movement/"}], "status": "completed", "connected": [], "thumb": "images/projects/civic-capital-making-civic-value-legible.jpg"}, {"slug": "metabolic-flows-reading-systems-through-movement", "title": "Metabolic Flows: Reading Systems Through Movement", "subtitle": "Every system moves something. Following the movement reveals the system.", "body": ["This practice emerged across engagements that appeared unrelated on the surface: visa journeys in the UAE, care pathways in Wales, resource and school-food systems in Sweden, food and tourism in the Philippines, education financing in Geneva, and later Metabolic Switzerland. Across each context, I led or shaped flow-based mapping methods that followed people, food, money, knowledge, resources, permissions, and trust across institutional boundaries, revealing bottlenecks and dependencies no single actor could see from inside its own fragment.", "Repeating the method showed that the most persistent failures often sit where tangible flows — food, housing, water, visas — meet less visible flows of governance, financing, legitimacy, and care. Flow maps can reveal where a system is blocked or unable to adapt, but seeing movement is different from governing it. That unresolved distinction became a foundation for the work that followed: what institutional capacity is required to reorganise the relationships a map makes visible?"], "thread": "01", "thread_name": "Making the invisible visible", "type": "Mapping", "location": "UAE / Wales / Sweden / Philippines / Switzerland", "year": "2017–2024", "meta": {"Year": "2017–2024", "Funder": "DAFZA / d’Impact · Hafod · Viable Cities / DML · UNDP Asia-Pacific Regional Innovation Centre · NORRAG · Mercator Foundation", "My role": "Methodology design · Systems mapping lead (2017–22) · Method handover and research scoping support (2024)", "Location": "UAE · Wales · Sweden · Philippines · Switzerland / Geneva", "Tags": "Systems mapping · Flow analysis · Metabolic systems · Methodology · Efficiency vs. sufficiency", "Outputs": "Human-capital journey map · Care, food, resource, and education flow maps · Metabolic Switzerland framework"}, "evidence": [{"label": "NORRAG — Mapping the International Geneva Ecosystem in Education", "url": "https://www.norrageducation.org/event-highlights-mapping-the-international-geneva-ecosystem-in-education/"}, {"label": "Caring for the Future — resources", "url": "https://www.caringforthefuture.co.uk/resources1#"}, {"label": "further materials available on request", "url": ""}], "status": "completed", "connected": [], "thumb": "images/projects/metabolic-flows-reading-systems-through-movement.jpg"}, {"slug": "colour-in-city-designing-reciprocity-into-civic-data", "title": "Colour-in City: Designing Reciprocity into Civic Data", "subtitle": "Public services collected information. They rarely built relationships.", "body": ["Colour-in City began from a gap in civic technology: public services collected administrative data about what people used, but little about how everyday life felt. As co-founder and project lead, I led the development of Squeezy, a conversational chatbot co-designed with parents living in overcrowded social housing in London. The most important design principle came from the parents themselves: if they shared meaningful data, the system should give something back. Reciprocity shaped what the bot asked, how it responded, and what it returned.", "The project showed that the breakthrough was not conversational AI but the structure of the relationship. A system that only extracts information reinforces distance between institutions and the people they serve; one built around reciprocity begins to redistribute agency. The unresolved question was whether public institutions were willing to redesign themselves around mutual exchange rather than using a friendlier interface to preserve the same transactional logic."], "thread": "02", "thread_name": "Building before permission", "type": "Prototype", "location": "London", "year": "2017", "meta": {"Year": "2017", "Funder": "European Union", "My role": "Co-founder · Project lead", "Location": "London, UK", "Tags": "Civic technology · Conversational AI · Co-design · Subjective wellbeing · Reciprocity", "Outputs": "Squeezy chatbot MVP · Wellbeing data dashboard · Data ethics framework · Open-source co-design process"}, "evidence": [{"label": "Service design and the city", "url": "https://medium.com/@Colourincity/service-design-and-the-city-d12ef75dba12"}, {"label": "Towards a process of (well)being", "url": "https://medium.com/@Colourincity/towards-a-process-of-well-being-efbbdfaf8bcd"}, {"label": "'Hey there! Is this a good time for a chat?'", "url": "https://medium.com/@Colourincity/hey-there-is-this-a-good-time-for-a-chat-549e6cc5f88c"}, {"label": "Design makes us human", "url": "https://medium.com/@Colourincity/design-makes-us-human-and-it-starts-with-a-story-fcab1b32bbd3"}, {"label": "Making data meaningful", "url": "https://medium.com/@Colourincity/making-data-meaningful-3a7066f0d3b2"}, {"label": "How do we make things together?", "url": "https://medium.com/@Colourincity/how-do-we-make-things-together-6f21b549624f"}, {"label": "Video interview", "url": "https://www.youtube.com/watch?v=i3tkAGIt2y0"}], "status": "completed", "connected": [], "thumb": "images/projects/colour-in-city-designing-reciprocity-into-civic-data.jpg"}, {"slug": "radical-childcare-designing-the-scaffold-before-the-solution", "title": "Radical Childcare: Designing the Scaffold Before the Solution", "subtitle": "Better ideas emerge when the system is understood before it is redesigned.", "body": ["Radical Childcare recognised that children’s outcomes could not be reduced to childcare services alone: genetics, parental trauma, housing, regulation, economy, and culture interacted across scales. Working within a Dark Matter Labs and Impact Hub Birmingham collaboration, I led the systems research and designed the methodological scaffold — layered risk maps, systems narratives, an opportunity framework, and workshop tools based on Donella Meadows’ leverage points — that gave more than 200 ideas a structural home.", "The project shifted my practice from designing individual solutions toward designing the conditions from which better solutions could emerge. The scaffold — research, maps, frameworks, and shared language — was the contribution, and its architecture travelled into Hafod, UNDP Bhutan, AYARF, Mind//Shift, RewirEd, and later governance work. It left a practical institutional question: if innovation depends on deep collective understanding, how should organisations fund and protect that invisible work before demanding solutions?"], "thread": "02", "thread_name": "Building before permission", "type": "Prototype", "location": "Birmingham", "year": "2018", "meta": {"Year": "2018", "Funder": "Big Lottery Fund · Impact Hub Birmingham", "My role": "Systems research lead · Methodology design · Workshop architecture · Facilitation", "Location": "Birmingham, UK", "Tags": "Systems research · Human development · Participatory design · Meadows leverage points · Method development", "Outputs": "Risk-factor maps · Systems narratives · Opportunity framework · Workshop toolkit · Two-day Systems Lab · Open-source methods"}, "evidence": [{"label": "DML project page", "url": "https://darkmatterlabs.org/feed/radical-childcare"}, {"label": "Impact Hub Birmingham", "url": "https://birmingham.impacthub.net/mission-birmingham-1/radicalchildcare/"}, {"label": "Caring for the Future — full story", "url": "https://www.caringforthefuture.co.uk/s/Final-medium-version.pdf"}, {"label": "Caring for the Future — Day 1", "url": "https://www.caringforthefuture.co.uk/s/Caring-for-the-Future-Day-1-jn9a.pdf"}, {"label": "Caring for the Future — Day 2", "url": "https://www.caringforthefuture.co.uk/s/Caring-for-the-Future-Day-02.pdf"}, {"label": "Breaking the silos — UNDP Bhutan", "url": "https://undpbhutan2012.medium.com/breaking-the-silos-through-participatory-systems-mapping-youth-employment-and-the-future-of-work-e3ee83950ed8"}], "status": "completed", "connected": ["01"], "thumb": "images/projects/radical-childcare-designing-the-scaffold-before-the-solution.jpg"}, {"slug": "ayarf-young-people-as-researchers-of-their-own-future", "title": "AYARF: Young People as Researchers of Their Own Future", "subtitle": "Institutions often study young people. Rarely do they trust them to investigate their own future.", "body": ["AYARF emerged from a shared conviction across Dark Matter Labs, Seoul Metropolitan Government, Seoul Youth Hub, The Seoul Institute, and C.dot: young people across Asia were routinely positioned as future workers, consumers, or policy beneficiaries, but rarely as legitimate researchers of the systems shaping their lives. Working with C.dot, I designed the fellowship architecture, eight open investigation challenges, and a twelve-day programme moving participants from provocation through systems inquiry and experimentation to public proposals, while serving as faculty throughout delivery.", "The fellowship showed that, with usable scaffolding, participants did more than contribute ideas: they generated evidence, challenged assumptions, and connected lived experience to structural conditions. Treating activist research as a civic practice redistributed who could produce legitimate knowledge. It also raised a harder question: if institutions recognise citizens as researchers, how must participation change when those citizens’ findings challenge the assumptions on which institutional decisions are based?"], "thread": "02", "thread_name": "Building before permission", "type": "Prototype", "location": "Asia", "year": "2019–2020", "meta": {"Year": "2019–2020", "Funder": "Seoul Metropolitan Government · Seoul Youth Hub · The Seoul Institute", "My role": "Fellowship architecture and curriculum design · Programme faculty · Systems-thinking methodology", "Location": "Seoul, South Korea (fellows from across Asia-Pacific)", "Tags": "Fellowship design · Youth research · Systems thinking · Civic participation · Programme architecture", "Outputs": "AYARF model and playbook · Eight investigation challenges · Twelve-day curriculum · Two cohorts"}, "evidence": [{"label": "Radical Futures Conference (Seoul Metropolitan Government)", "url": "https://english.seoul.go.kr/radical-futures-conference-gathering-of-asian-youths-to-discuss-social-issues-in-seoul/"}, {"label": "AYARF YouTube channel", "url": "https://www.youtube.com/c/AYARF"}, {"label": "Seoul Institute report", "url": "https://www.si.re.kr/bbs/view.do?key=2024100044&pstSn=2006240004"}, {"label": "AYARF Playbook", "url": "https://drive.google.com/file/d/1E6a8TV3diSxBmVSpQ6bC8JQ4Va4Abxd1/view"}, {"label": "Materials available on request.", "url": ""}], "status": "completed", "connected": [], "thumb": "images/projects/ayarf-young-people-as-researchers-of-their-own-future.jpg"}, {"slug": "mind-shift-mental-wealth-as-public-infrastructure", "title": "Mind//Shift: Mental Wealth as Public Infrastructure", "subtitle": "Mental health is treated as an individual condition. The project asked what society produces.", "body": ["Mind//Shift began by reframing mental health as a structural condition shaped by air quality, financial insecurity, urban design, loneliness, labour markets, and food systems — not primarily as a clinical service problem. Working within Dark Matter Labs with RISE, Region Stockholm, Viable Cities, and Openlab, I led the systems research and designed the Human(e) Revolution workshop and the four-day Almedalen programme, connecting seven layers from human intelligence to economy and governance into a shared Mental Futures map and portfolio of experiments.", "The work changed the unit of intervention: from treating illness to asking how society might organise itself so that wellbeing becomes more likely. It also revealed the limits of temporary convening. Organisations could build a shared view of systemic responsibility, but sustaining coordinated action beyond the programme was harder. The unresolved question was how a coalition formed around a new frame becomes lasting institutional capacity rather than dissolving when the event or funding cycle ends."], "thread": "02", "thread_name": "Building before permission", "type": "Prototype", "location": "Sweden", "year": "2019–2020", "meta": {"Year": "2019–2020", "Funder": "Region Stockholm · RISE · Viable Cities", "My role": "Systems research lead · Programme design · Almedalen programme lead", "Location": "Stockholm and Visby, Sweden", "Tags": "Mental wealth · Systems research · Participatory governance · Portfolio design · Collective wellbeing", "Outputs": "Mental Futures systems map · Portfolio of experiments · Human(e) Revolution workshop · Almedalen programme · Agenda Wellbeing framework"}, "evidence": [{"label": "DML project page", "url": "https://darkmatterlabs.org/feed/mind-shift"}, {"label": "Mind//Shift website", "url": "http://www.mindshift.health"}, {"label": "Almedalen video", "url": "https://www.youtube.com/watch?v=n5N7QAQ5eWg"}], "status": "completed", "connected": [], "thumb": "images/projects/mind-shift-mental-wealth-as-public-infrastructure.jpg"}, {"slug": "rewired-sandbox-designing-for-others-to-continue", "title": "RewirEd Sandbox: Designing for Others to Continue", "subtitle": "The measure of a platform is whether others can carry it forward.", "body": ["RewirEd asked why global education continued to describe itself primarily through crisis. Working within Dark Matter Labs and Radicle, with Dubai Cares, Expo 2020 Dubai, and the UAE Ministry of Foreign Affairs, I led the local and international team through interviews and systems mapping that traced familiar debates about schools and skills back to a deeper uncertainty: if automation and social change are reshaping what labour and meaning are, what is education preparing people for? The research became six provocations and the RewirEd Sandbox, an enabling platform for partners to develop their own experiments.", "The project clarified that leading a mission does not always mean operating it. Our role was to hand over a map, language, and platform robust enough for Dubai Cares, Radicle, and the wider coalition to continue without our direction. This contrasted with AYARF, where I remained inside delivery as faculty. The unresolved design question was how to build capability rather than dependency — distributing ownership without allowing the mission’s public purpose to disappear in the handover."], "thread": "02", "thread_name": "Building before permission", "type": "Prototype", "location": "Dubai", "year": "2021–2022", "meta": {"Year": "2021–2022", "Funder": "Dubai Cares · Expo 2020 Dubai", "My role": "Project lead · Systems research · Provocation development · Sandbox architecture", "Location": "Dubai, UAE", "Tags": "Education systems · Platform design · Systems mapping · Mission design · Institutional transition", "Outputs": "RewirEd systems map · Six provocations · RewirEd Sandbox · Handbook for Building Change"}, "evidence": [{"label": "Interactive Map of RewirEd Nodes: Nodes in the Education System", "url": "https://kumu.io/rewired/rewiring-nodes-in-the-education-system#rewired-summit-2021/default-view"}, {"label": "Dubai Cares — RewirEd (Expo 2020)", "url": "https://www.dubaicares.ae/expo2020/rewired/"}, {"label": "DML Provocations Note", "url": "https://provocations.darkmatterlabs.org/dm-note-2-f5f270d13428"}, {"label": "RewirEd Conference talk (PPT)", "url": "https://drive.google.com/file/d/1h-CuhuUx14k7AP8oOMnpE0OYWX5p1Q6x/view"}], "status": "completed", "connected": [], "thumb": "images/projects/rewired-sandbox-designing-for-others-to-continue.jpg"}, {"slug": "permissioning-the-city-designing-permission-as-protocol", "title": "Permissioning the City: Designing Permission as Protocol", "subtitle": "A permit fixes a rule in place. The space it governs keeps changing shape.", "body": ["Cities still regulate space through instruments designed for stable uses — zoning categories, fixed permits, standard licences, and binary approvals — while spaces themselves have become fluid. Within Dark Matter Labs, I led Permissioning the City as project lead and mission holder, working with colleagues across Seoul, London, and Daegu. The project developed an open-source Permissioning Engine through which communities and public authorities could describe proposed uses, identify risks, negotiate conditions, and verify agreements through layered peer- and sensor-based checks.", "The six-month demonstration proved that permission could move from approved or denied toward yes, under these conditions. It also exposed the distance between a compelling protocol and infrastructure a city could rely on. Under delivery pressure, the form-based interface flattened the variety of spaces into checkboxes and drifted toward the shape of a booking platform. That limit became the real contribution: what public infrastructure could hold negotiation, precedent, and trust at city scale without rebuilding the same administrative logic in digital form? That question became Civic Ledger."], "thread": "03", "thread_name": "Designing the rule", "type": "Infrastructure", "location": "Daegu, South Korea", "year": "2021–2024", "meta": {"Year": "2021–2024", "Funder": "Bloomberg Global Mayors Challenge · P4NE · National IT Industry Promotion Agency (NIPA)", "My role": "Project lead and mission holder", "Location": "Daegu, South Korea (with London scoping workshop)", "Tags": "Spatial governance · Permissioning · Protocols-driven design · Civic technology · Adaptive regulation", "Outputs": "Open-source Permissioning Engine MVP · Rule-making and sensor workshops · Six-month demonstration · World Government Summit 2025 demonstration"}, "evidence": [{"label": "Project site", "url": "https://www.permissioning.city/"}, {"label": "Permissioning Engine (MVP)", "url": "https://engine.permissioning.city"}, {"label": "Original provocation", "url": "https://provocations.darkmatterlabs.org/re-permissioning-the-city-unlocking-cities-growing-underutilised-spatial-assets-for-an-emergent-1550997714a4"}, {"label": "MVP demonstration, World Gov Summit 2025", "url": "https://youtu.be/YcVEtAgddwk"}, {"label": "Bloomberg Cities coverage", "url": "https://bloombergcities.jhu.edu/news/city-putting-its-people-charge-public-space"}, {"label": "Product journey blog: \"Are we coding too soon?\"", "url": "https://darkmatterlabs.substack.com/p/1-transitioning-from-project-to-product-day-3-06423aa328b4"}], "status": "completed", "connected": ["02"], "thumb": "images/projects/permissioning-the-city-designing-permission-as-protocol.jpg"}, {"slug": "civic-ledger-negotiation-as-public-infrastructure", "title": "Civic Ledger: Negotiation as Public Infrastructure", "subtitle": "A prototype shows change is possible. Public infrastructure determines whether it can endure.", "body": ["Civic Ledger begins where Permissioning the City reached its limit: not whether conditional permission can work, but whether negotiation itself can become permanent public infrastructure. Developed within Dark Matter Labs and piloted with municipal partners in South Korea, the system is organised as coordinating agents that interpret citizen intent, host deliberation, match proposals against rules and risk, verify evidence, and record decisions as explainable precedents. Cases can move toward auto-approval, conditional agreement, or deeper deliberation while retaining human review.", "The project shifts from designing an interface to asking how a public institution learns. Each negotiated agreement can become part of a growing civic memory rather than leaving every case to begin from zero. The hardest challenge is not technical but institutional: governments can buy software, but legitimacy depends on whether discretion remains understandable, accountable, and publicly contestable. The open question is whether an adaptive civic technology can become a durable institution without turning trust, judgment, or public purpose into commodities."], "thread": "03", "thread_name": "Designing the rule", "type": "Municipal beta pilot", "location": "South Korea", "year": "2025–", "meta": {"Year": "2025–", "Funder": "National IT Industry Promotion Agency (NIPA) · Ministry of Science and ICT (consortium delivery)", "My role": "Project lead and mission holder", "Location": "South Korea — Incheon · Daegu · Yongin · Jeollanam-do", "Tags": "Governance infrastructure · Agentic AI · Public institutions · Negotiation · Civic protocols", "Outputs": "Municipal beta pilot · Multi-agent orchestration architecture · Deliberation interface · Auto-approval demonstration · Sustainability framework · 36-month roadmap"}, "evidence": [{"label": "Civic Ledger project site — Coming soon", "url": ""}, {"label": "Apolitical event: Creating Safe Space for New Ideas in a Risk-Averse Culture (Jun 2026)", "url": "https://apolitical.co/en/events/jun-2026-creating-safe-space-for-new-ideas-in-a-risk-averse-culture"}, {"label": "Apolitical: The Permissionless City — A Platform Reimagining Licensing", "url": "https://apolitical.co/en/articles/the-permissionless-city-a-platform-reimagining-licensing"}, {"label": "Nominated, 2026 Edge 50", "url": "https://apolitical.co/en/lists/edge-50-2026"}, {"label": "Peer-to-Peer Permissioning: Three Pathways towards Decentralised Civics (RadicalxChange)", "url": "https://www.radicalxchange.org/updates/blog/pathways-towards-decentralized-civics/"}], "status": "active", "connected": ["01", "02"], "thumb": "images/projects/civic-ledger-negotiation-as-public-infrastructure.jpg"}, {"slug": "tech-embassy-for-the-future-technology-as-public-infrastructure", "title": "Tech Embassy for the Future: Technology as Public Infrastructure", "subtitle": "Technology is no longer only something governments regulate. It is something they govern through.", "body": ["Within Dark Matter Labs Korea, I led the systems strategy and logic model design for a five-year research engagement commissioned by Korea’s Ministry of Land, Infrastructure and Transport. The work asked how a ministry historically responsible for bridges, roads, and national infrastructure should respond when artificial intelligence, data, supply chains, and collaborative R&D increasingly shape economic security and diplomacy. We developed a three-part logic model linking the crises driving this shift, emerging changes in value and security, and the transition capabilities and portfolios a lead market would need, stress-tested through Horizon Europe.", "The project expanded infrastructure from physical assets to the institutional relationships through which technology is developed, governed, and exchanged across borders. It also exposed a mismatch: technologies and risks operate transnationally, while R&D strategy remains largely nation-bound and ministry-led. The unresolved question was what multinational guideline layer could support rapid cooperation and uncertainty without requiring each government to abandon its own mandate or reduce collaboration to the next bilateral agreement."], "thread": "03", "thread_name": "Designing the rule", "type": "Infrastructure", "location": "South Korea", "year": "2022–", "meta": {"Year": "2022–", "Funder": "Ministry of Land, Infrastructure and Transport (MOLIT), South Korea", "My role": "Systems strategy and logic model design lead", "Location": "South Korea", "Tags": "Technology diplomacy · Governance strategy · Infrastructure · Logic models · International collaboration", "Outputs": "Three-part logic model · Horizon Europe comparative analysis · Strategic partnership shortlist · Research report"}, "evidence": [{"label": "ALICE: Exploring Europe-Korea Collaboration through the Tech Embassy Initiative", "url": "https://www.etp-logistics.eu/alice-explores-opportunities-for-europe-korea-collaboration-through-the-tech-embassy-initiative/"}], "status": "active", "connected": [], "thumb": "images/projects/tech-embassy-for-the-future-technology-as-public-infrastructure.jpg"}, {"slug": "sensing-urban-nodes-designing-new-forms-of-civic-evidence", "title": "Sensing Urban Nodes: Designing New Forms of Civic Evidence", "subtitle": "Cities collect vast amounts of data. The question is what they recognise as evidence.", "body": ["Across three related prototypes, Dark Matter Labs Korea explored how institutional evidence might expand beyond technical measurement to include lived experience. The Vacant Home Digital Twin traced the structural drivers beneath vacancy rather than defaulting to the easiest reuse; TreesAI combined remote sensing, weather, institutional, and citizen data to read heat exposure rather than heat alone; Resilience Compass layered Location-Based Scoring with narrative Cornerstone Indicators so citizen experience could enter climate-risk interpretation. Across the work, I led project or platform strategy and systems design with Vaiv, Yonsei University, Innovate UK, and Korean government partners.", "The projects reframed sensing as a governance question. Sensors do not merely measure reality; they define what institutions are capable of seeing and therefore what they can justify acting on. The challenge was not to collect more data, but to hold statistical, spatial, environmental, and lived knowledge together without collapsing them into one metric. The inquiry remains open: what institutional changes are required before citizen experience can stand alongside quantitative measurement as legitimate public evidence rather than remaining consultation at the edge of a decision?"], "thread": "03", "thread_name": "Designing the rule", "type": "Infrastructure", "location": "South Korea", "year": "2023", "meta": {"": "Vacant Home Digital Twin", "Year": "2023", "Funder": "National Information Society Agency (NIA) — proposal stage", "My role": "Project lead and design researcher", "Location": "Daegu, South Korea (Seogu district)", "Tags": "Digital twin · Vacant homes · Risk concentration · Policy evidence", "Outputs": "Impact-chain framework, Civic Tech Lab curriculum, City Pulse integration plan (proposal stage)"}, "evidence": [{"label": "TreesAI’s Heat-Sensing Collaboration", "url": "https://provocations.darkmatterlabs.org/treesais-heat-sensing-collaboration-c69588a8ba28"}, {"label": "Digital twins / Location-Based Scoring", "url": "https://rc.vaiv.kr/map"}, {"label": "Citizen survey platform", "url": "https://resiliencecompass-citizen.kr"}, {"label": "Vacant Home proposal — none public, withdrawn before award", "url": ""}], "status": "completed", "connected": ["01"], "thumb": "images/projects/sensing-urban-nodes-designing-new-forms-of-civic-evidence.jpg"}, {"slug": "regx-lab-building-regulation-that-can-learn", "title": "RegX Lab: Building Regulation That Can Learn", "subtitle": "Technology kept changing. Regulation remained fixed.", "body": ["RegX Lab grew from Dark Matter Labs’ wider inquiry into governance and regulation, including two years of work with the Dubai Airport Freezone Authority on the future of programmable enterprise. As technologies, organisational forms, and social practices changed faster than conventional rule-making could respond, the work explored alternatives to static regulation: sandboxes, temporary licences, pilot zones, programmable agreements, and supervised civic experimentation. These efforts unfolded across several locations, including the launch of a Canadian regulatory sandbox for civic participation, while connecting practitioners working in cities such as Amsterdam, Toronto, and Copenhagen. My involvement moved in and out of this wider body of work, contributing to its governance framing and to experiments that translated abstract regulatory questions into situations people could test.", "Restaurant Day in Seoul became one of the most important of those experiments. Participants imagined opening a restaurant in the city for a single day, then worked backwards through the permissions, identities, resources, risks, and agreements that would make it possible. The exercise exposed how a simple civic act was constrained by vertical approval systems and asked whether trust-based, peer-supported agreements could create a more humane form of governance. It became an early foundation for Permissioning the City and helped shape a framework moving from rules-driven, to parameters-driven, to protocols-driven governance. It also widened the inquiry beyond administrative efficiency: regulation should help produce civic value, stewardship, shared capability, and reciprocal relationships between institutions, citizens, and place. The question RegX left open was not whether governments could run experiments, but whether experimentation could become a durable way for regulation itself to learn."], "thread": "03", "thread_name": "Designing the rule", "type": "Research and experimentation", "location": "International", "year": "2018–", "meta": {"Year": "2018–", "Funder / partners": "Dark Matter Labs governance and regulatory research strand · DAFZA · international partners", "My role": "Contributing governance researcher and experiment designer · Intermittent involvement across the wider RegX strand", "Location": "International", "Tags": "Regulatory experimentation · Programmable regulation · Civic participation · Protocols-driven governance · Civic value", "Outputs": "Programmable enterprise research · regulatory experimentation · civic-governance prototypes · foundations for Permissioning the City"}, "evidence": [{"label": "Who Owns the City? Imagining Humane, Technology-Enabled Urban Governance", "url": "https://medium.com/unusual-suspects-festival-seoul/%EC%84%9C%EC%9A%B8-%EB%8F%84%EC%8B%9C%EC%9D%98-%EC%A3%BC%EC%9D%B8%EC%9D%80-%EB%88%84%EA%B5%AC%EC%9D%B8%EA%B0%80-%EA%B8%B0%EC%88%A0%EA%B8%B0%EB%B0%98%EC%9D%98-%EC%9D%B8%EA%B0%84%EC%A0%81-%EB%8F%84%EC%8B%9C%EA%B1%B0%EB%B2%84%EB%84%8C%EC%8A%A4-%EC%83%81%EC%83%81%ED%95%98%EA%B8%B0-5bc028b0e9a6"}, {"label": "Restaurant Day event page", "url": "https://event-us.kr/usfseoul/event/3374"}, {"label": "Re:Permissioning the City — rules-driven, parameters-driven, and protocols-driven governance", "url": "https://provocations.darkmatterlabs.org/re-permissioning-the-city-unlocking-cities-growing-underutilised-spatial-assets-for-an-emergent-1550997714a4"}, {"label": "Next State DAFZA: programmable enterprise", "url": "https://darkmatterlabs.org/feed/next-state-dafza"}], "status": "active", "connected": ["02"], "thumb": "images/projects/regx-lab-building-regulation-that-can-learn-2.jpg"}, {"slug": "thoughts-on-the-people-and-places-of-south-africa", "title": "Thoughts on the People and Places of South Africa", "subtitle": "Sometimes a place changes a practice before it is understood.", "body": ["This project began with a pause rather than a commission. After leaving a stable role without another one lined up, I travelled through South Africa with a camera and notebook, allowing observation to precede the demand for an outcome. The resulting visual ethnography combined photography and short essays around hope, commons, and invisible people — while acknowledging the limits and naivety of an outsider’s first reading of a place with histories far deeper than a brief journey could hold.", "Looking back, the work marked a change from analysing systems toward attending to how knowledge forms through patience, image, and encounter. It resisted turning every observation into a framework or intervention. The question it left behind now shapes Thread 04: what becomes visible when a place is witnessed before it is redesigned, and how can attention remain responsible when the observer does not belong to the history being observed?"], "thread": "04", "thread_name": "What ground requires", "type": "Visual ethnography", "location": "South Africa", "year": "2016", "meta": {"Year": "2016", "Funder": "Self-funded — independent project during a career break", "My role": "Author and photographer (independent, self-directed)", "Location": "South Africa (Cape Town)", "Tags": "Visual ethnography · Photography · Observation · Outsider perspective · Reflection", "Outputs": "Thoughts on the People and Places of South Africa · Companion essays: Hope, Commons, Invisible People"}, "evidence": [{"label": "Thoughts on the People and Places of South Africa (Issuu)", "url": "https://issuu.com/eunjikangsin/docs/thoughts_on_the_people_and_places_o"}, {"label": "South Africa visual publication (Google Drive)", "url": "https://drive.google.com/file/d/1p8zc54PlI2ns8nNIFUwfK8K2ayax62MS/view"}, {"label": "Hope", "url": "https://medium.com/@eunjikang/hope-b88a3d1c0089"}, {"label": "Commons", "url": "https://medium.com/@eunjikang/commons-3f23bebb9be6"}, {"label": "Invisible People", "url": "https://medium.com/@eunjikang/invisible-people-155eb03c1378"}], "status": "completed", "connected": [], "thumb": "images/projects/thoughts-on-the-people-and-places-of-south-africa.jpg"}, {"slug": "unravel-building-from-what-remains", "title": "UnRavel: Building from What Remains", "subtitle": "The economy withdrew. The land kept working.", "body": ["UnRavel began after the 2022 eastern Kentucky floods, when a piece of restored post-mining land near Jenkins came onto the market. Jenkins had once been a centre of coal production and regional commerce; today it is a rural city of fewer than two thousand people, navigating the long aftermath of industrial withdrawal, population decline, limited employment, uneven connectivity, and recurring climate risk. Family ties to the area made it possible to enter through existing relationships with public institutions and local communities. The original ambition was to use the land as a gathering point for locally led regeneration — bringing people, practical skills, small enterprise, and new forms of stewardship into one place.", "Over the following year, that ambition took material form through hay cutting and storage, a hoop barn, cabin and barn repairs, land management, and a continuing series of small and large jobs carried out with local tradespeople and residents. The work was largely self-funded and often resembled a rural version of a Men’s Shed: practical projects became a way of creating income, connection, and shared purpose without first building a formal programme around them. Yet the larger regeneration vision did not unfold as imagined. Weak local markets, scarce employment, limited broadband and mobile coverage, and deep social fatigue constrained what one property could sustain.", "What became visible instead was a contrast between social decline and ecological persistence. The former mining landscape continued to regenerate in ways that did not depend on a strategy, grant, or human timetable. Grass returned, hay grew, animals moved through the land, and seasonal systems kept working even where formal economic systems had weakened. This changed the inquiry. UnRavel became less a project for “revitalising” a place and more a test of what resilient infrastructure might mean for a very small post-extractive city: not only broadband, jobs, or investment, but the relationships, practical capabilities, local trust, and repeated acts of maintenance through which social fabric can grow.", "The work remains unresolved. It did not become the regeneration centre first imagined, and that limit should remain visible. The question it leaves open is more precise now: what forms of transition are possible for micro-cities shaped by extraction, climate risk, and digital exclusion — and what kind of infrastructure helps local people build a future without requiring the place to become something entirely different?"], "thread": "04", "thread_name": "What ground requires", "type": "Forming", "location": "Jenkins, Kentucky", "year": "2023–", "meta": {"Year": "2023–", "Funder": "Self-funded · UnRavel LLC", "My role": "Founder · Land steward · Project initiator · Local relationship and practical-work coordination", "Location": "Jenkins, Kentucky, USA", "Tags": "Post-extractive transition · Rural regeneration · Repair · Social infrastructure · Digital exclusion · Land stewardship", "Outputs": "Hay production and storage · Hoop barn · Cabin and barn repair · Land-management works · Local paid craft and maintenance projects · Photographic field record · Emerging transition inquiry"}, "evidence": [{"label": "Jenkins, Kentucky — local and mining history", "url": "https://en.wikipedia.org/wiki/Jenkins%2C_Kentucky"}, {"label": "National Weather Service assessment: July 2022 Eastern Kentucky floods", "url": "https://www.weather.gov/media/publications/assessments/July_2022_Significant_River_Flash_Flood_SE_KY.pdf"}, {"label": "Diana Baldwin and Mine No. 29 — women in Jenkins coal history", "url": "https://appalachianhistorian.org/the-story-of-dianna-baldwin-from-letcher-kentucky/"}], "status": "forming", "connected": ["01"], "thumb": "images/projects/unravel-building-from-what-remains.jpg"}]; const threads={"01": {"name": "Making the invisible visible", "status": "Active", "desc": "Every system is shaped by things it does not formally record: the informal rule, the uncounted cost, the relationship no dataset captures, the interdependency no institution can see from inside its own remit. This thread follows the work of making those forces legible — not simply to explain complexity, but to create shared ground from which a system can be questioned and changed."}, "02": {"name": "Building before permission", "status": "Active", "desc": "Some of the most important civic possibilities emerge before institutions know how to authorise them. This thread follows prototypes, programmes, and platforms built at the edge of what existing systems allowed — not as finished solutions, but as scaffolds through which people could produce knowledge, test alternatives, and build new forms of collective capacity."}, "03": {"name": "Designing the rule", "status": "Active", "desc": "A prototype can demonstrate that another arrangement is possible. The harder task is turning that possibility into infrastructure a public institution can operate, question, and revise. This thread follows the move from experimental interfaces toward systems of permission, evidence, negotiation, and institutional learning — replacing fixed decisions with rules capable of responding to context without abandoning accountability."}, "04": {"name": "What ground requires", "status": "Forming · 2025–", "desc": "This thread turns toward the questions beneath the institutional work: not only how systems might become more adaptive, but what they are being asked to sustain. Through observation, repair, land, and slower forms of practice, it considers what changes when growth is no longer the organising principle and a place is allowed to shape the work before the work attempts to shape the place."}};
+const civicLedgerEntry=projects.find(p=>p.slug==='civic-ledger-negotiation-as-public-infrastructure');
+const civicLedgerSite=civicLedgerEntry?.evidence.find(e=>e.label==='Civic Ledger project site — Coming soon');
+if(civicLedgerSite){civicLedgerSite.label='Civic Ledger project site';civicLedgerSite.url='https://civicledger.city'}
+if(civicLedgerEntry){
+  civicLedgerEntry.evidence.forEach(item=>{
+    if(item.label.startsWith('Apolitical event:'))item.label='Creating Safe Space for New Ideas · Apolitical';
+    else if(item.label.startsWith('Apolitical: The Permissionless City'))item.label='The Permissionless City · Apolitical';
+    else if(item.label.startsWith('Nominated, 2026 Edge 50'))item.label='Edge 50 nomination';
+    else if(item.label.startsWith('Peer-to-Peer Permissioning:'))item.label='Peer-to-Peer Permissioning · RadicalxChange';
+  });
+}
+const state={thread:'all'};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+function routeParts(){const raw=location.hash.slice(1)||'home'; const [path,q='']=raw.split('?'); return {path,params:new URLSearchParams(q)}}
+function showPage(id){$$('.page').forEach(p=>p.classList.toggle('active',p.id===id)); $$('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id)); $('#nav').classList.remove('open'); $('.menu').setAttribute('aria-expanded','false');}
+function projectLink(p,origin='projects'){return '#project/'+p.slug+'?from='+origin}
+function formatThreadTitle(n){
+  const titles={
+    '01':'Making the <span class="thread-key">invisible</span> visible',
+    '02':'Building before <span class="thread-key">permission</span>',
+    '03':'Designing the <span class="thread-key">rule</span>',
+    '04':'What <span class="thread-key">ground</span> requires'
+  };
+  return titles[n]||threads[n].name;
+}
+function formatThreadDescription(text){
+  const boundary=Math.max(text.lastIndexOf('. '),text.lastIndexOf('? '),text.lastIndexOf('! '));
+  if(boundary<0)return `<strong class="thread-highlight">${text}</strong>`;
+  const start=boundary+2;
+  return `${text.slice(0,start)}<strong class="thread-highlight">${text.slice(start)}</strong>`;
+}
+function formatHomeThreadDescription(n,text){
+  const keywords={
+    '01':'informal rule',
+    '02':'prototypes, programmes, and platforms',
+    '03':'permission, evidence, negotiation, and institutional learning',
+    '04':'observation, repair, land, and slower forms of practice'
+  };
+  const keyword=keywords[n];
+  return keyword&&text.includes(keyword)
+    ?text.replace(keyword,`<span class="thread-keyword">${keyword}</span>`)
+    :text;
+}
+function renderHomeThreads(){ $('#home-threads').innerHTML=Object.entries(threads).map(([n,t])=>`<a class="thread-card" href="#threads/${n}"><div><div class="home-thread-head"><span class="thread-no">${n}</span><span class="home-thread-status ${n==='04'?'forming':''}">${n==='04'?'Forming':'Active'}</span></div><h3>${formatThreadTitle(n)}</h3><p>${formatHomeThreadDescription(n,t.desc.split(' — ')[0])}</p></div></a>`).join('') }
+function renderThreads(focus){$('#thread-bands').innerHTML=Object.entries(threads).map(([n,t])=>{const ps=projects.filter(p=>p.thread===n);const forming=n==='04'?`<div class="forming-list forming-list-right"><strong>In formation</strong><span>Agricultural commons governance</span><span>Micro-transitions: towns with populations under 5,000</span></div>`:'';return `<article class="thread-band" id="thread-${n}"><div class="num">${n}</div><div class="frame"><h2>${formatThreadTitle(n)}</h2><p>${formatThreadDescription(t.desc)}</p><div class="thread-status-line ${n==='04'?'forming':''}">${t.status}</div></div><div class="thread-projects">${ps.map(p=>`<a href="${projectLink(p,'thread-'+n)}" onclick="saveThreadScroll('${n}')">${p.title} <span class="thread-project-year">${p.year}</span></a>`).join('')}${forming}</div></article>`}).join(''); if(focus)setTimeout(()=>document.querySelector('#thread-'+focus)?.scrollIntoView(),0)}
+function initFilters(){const tf=[['all','All'],...Object.keys(threads).map(n=>[n,'Thread '+n])];$('#thread-filters').innerHTML=tf.map(([v,l])=>`<button class="filter-btn" data-kind="thread" data-value="${v}">${l}</button>`).join(''); $$('.filter-btn').forEach(b=>b.onclick=()=>{state.thread=b.dataset.value;renderProjects(true)})}
+function projectThumbMarkup(p){return p.thumb?`<div class="project-thumb has-image"><img src="${p.thumb}" alt="${p.title} thumbnail" loading="lazy"></div>`:`<div class="project-thumb">Project thumbnail<br>Recommended 1600 × 1200 px · 4:3</div>`}
+function renderProjects(updateUrl=false){let ps=[...projects].sort((a,b)=>String(b.year).localeCompare(String(a.year)));ps=ps.filter(p=>state.thread==='all'||p.thread===state.thread);$('#project-grid').innerHTML=ps.map(p=>`<a class="project-card ${p.status==='forming'?'forming':''}" href="${projectLink(p,'projects')}">${projectThumbMarkup(p)}<div class="project-card-copy"><div class="card-top"><span class="project-thread-label">${p.thread}</span><span class="project-status ${p.status}">${p.status}</span></div><h2>${p.title}</h2><p>${p.subtitle}</p><div class="card-top" style="margin-top:20px"><span>${p.year}</span><span>${p.location}</span></div></div></a>`).join('')||'<div style="padding:40px">No projects match this thread.</div>'; $$('.filter-btn').forEach(b=>b.classList.toggle('on',state.thread===b.dataset.value));sessionStorage.setItem('projectFilters',JSON.stringify(state));if(updateUrl)history.replaceState(null,'','#projects?thread='+state.thread)}
+function saveThreadScroll(n){sessionStorage.setItem('threadOrigin',n);sessionStorage.setItem('threadScroll',String(scrollY))}
+
+const projectGalleryCounts={
+  'seeing-unemployment-as-a-system':3,
+  'data-storytelling-facts-into-emotions':3,
+  'iot-visual-language-making-new-technology-visible':3,
+  'civic-capital-making-civic-value-legible':3,
+  'metabolic-flows-reading-systems-through-movement':4,
+  'colour-in-city-designing-reciprocity-into-civic-data':3,
+  'radical-childcare-designing-the-scaffold-before-the-solution':3,
+  'ayarf-young-people-as-researchers-of-their-own-future':3,
+  'mind-shift-mental-wealth-as-public-infrastructure':3,
+  'rewired-sandbox-designing-for-others-to-continue':3,
+  'permissioning-the-city-designing-permission-as-protocol':3,
+  'civic-ledger-negotiation-as-public-infrastructure':4,
+  'tech-embassy-for-the-future-technology-as-public-infrastructure':3,
+  'sensing-urban-nodes-designing-new-forms-of-civic-evidence':3,
+  'regx-lab-building-regulation-that-can-learn':3,
+  'thoughts-on-the-people-and-places-of-south-africa':3,
+  'unravel-building-from-what-remains':3
+};
+function projectMediaMarkup(p){
+  const standardSlots=[
+    {label:'Image 01 · Lead image',size:'Recommended source: 2000 × 1250 px',use:'Displayed at 16:10 · landscape'},
+    {label:'Image 02 · Process / field image',size:'Recommended source: 2000 × 1250 px',use:'Displayed at 16:10 · landscape'},
+    {label:'Image 03 · Output / detail image',size:'Recommended source: 2000 × 1250 px',use:'Displayed at 16:10 · landscape'}
+  ];
+  const galleryCount=projectGalleryCounts[p.slug]||0;
+  const slots=galleryCount
+    ?Array.from({length:galleryCount},(_,i)=>standardSlots[i]||{label:`Image ${String(i+1).padStart(2,'0')} · Additional project image`,size:'Source: 2000 × 1250 px',use:'Displayed at 16:10 · landscape'})
+    :standardSlots;
+  const thread4GalleryPrefixes={
+    'thoughts-on-the-people-and-places-of-south-africa':'assets/thread4/south-africa',
+    'unravel-building-from-what-remains':'assets/thread4/unravel'
+  };
+  const media=galleryCount
+    ?Array.from({length:galleryCount},(_,i)=>({
+      src:thread4GalleryPrefixes[p.slug]
+        ?`${thread4GalleryPrefixes[p.slug]}-${String(i+1).padStart(2,'0')}.jpg`
+        :`images/projects/gallery/${p.slug}-${i+1}.jpg`,
+      alt:`${p.title} project image ${i+1} of ${galleryCount}`
+    }))
+    :(p.thumb?[{src:p.thumb,alt:`${p.title} image`}]:[]);
+  const supplied=media.length;
+  return `<section class="project-media" data-media="${p.slug}" aria-label="${p.title} project image gallery">
+    <div class="project-media-viewport">
+      <div class="project-media-track">
+        ${slots.map((s,i)=>`<div class="project-media-slide" aria-hidden="${i===0?'false':'true'}">${media[i]?`<div class="image-slot has-image"><img src="${media[i].src}" alt="${media[i].alt}" loading="lazy"></div>`:`<div class="image-slot"><div><strong>${s.label}</strong><span>${s.size}<br>${s.use}<br>JPG or WebP · under 500 KB preferred</span></div></div>`}</div>`).join('')}
+      </div>
+    </div>
+    <div class="project-media-controls">
+      <div class="project-media-dots" aria-label="Choose image">
+        ${slots.map((_,i)=>`<button class="project-media-dot ${i===0?'on':''}" type="button" data-index="${i}" aria-label="Show image ${i+1}"></button>`).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+function emphasiseProjectMessage(text,boldOpening,highlightFinal){
+  if(!boldOpening&&!highlightFinal)return text;
+  const firstStops=[text.indexOf('. '),text.indexOf('? '),text.indexOf('! ')].filter(index=>index>=0);
+  const firstEnd=firstStops.length?Math.min(...firstStops)+1:text.length;
+  const opening=text.slice(0,firstEnd);
+  if(!highlightFinal)return `<strong class="project-emphasis">${opening}</strong>${text.slice(firstEnd)}`;
+  const boundary=Math.max(text.lastIndexOf('. '),text.lastIndexOf('? '),text.lastIndexOf('! '));
+  const finalStart=boundary<0?0:boundary+2;
+  if(finalStart===0)return `<strong class="project-highlight">${text}</strong>`;
+  const beforeFinal=text.slice(0,finalStart);
+  const prepared=boldOpening
+    ?`<strong class="project-emphasis">${opening}</strong>${beforeFinal.slice(firstEnd)}`
+    :beforeFinal;
+  return `${prepared}<strong class="project-highlight">${text.slice(finalStart)}</strong>`;
+}
+function projectBodyMarkup(p){
+  const paragraphs=p.body.map((x,index)=>`<p>${linkNatural(emphasiseProjectMessage(x,index===0,index===p.body.length-1))}</p>`);
+  if(!paragraphs.length) return projectMediaMarkup(p);
+  return paragraphs[0]+projectMediaMarkup(p)+paragraphs.slice(1).join('');
+}
+function initProjectMedia(){
+  document.querySelectorAll('.project-media').forEach(media=>{
+    const track=media.querySelector('.project-media-track');
+    const slides=[...media.querySelectorAll('.project-media-slide')];
+    const dots=[...media.querySelectorAll('.project-media-dot')];
+    let index=0;
+    let timer;
+    const show=(next)=>{
+      index=(next+slides.length)%slides.length;
+      track.style.transform=`translateX(-${index*100}%)`;
+      slides.forEach((s,i)=>s.setAttribute('aria-hidden',String(i!==index)));
+      dots.forEach((d,i)=>d.classList.toggle('on',i===index));
+    };
+    const restart=()=>{
+      clearInterval(timer);
+      timer=setInterval(()=>show(index+1),5000);
+    };
+    const viewport=media.querySelector('.project-media-viewport');
+    viewport.onclick=(event)=>{
+      const bounds=viewport.getBoundingClientRect();
+      const position=(event.clientX-bounds.left)/bounds.width;
+      if(position<=.3){show(index-1);restart()}
+      else if(position>=.7){show(index+1);restart()}
+    };
+    const previous=media.querySelector('.media-prev');
+    const next=media.querySelector('.media-next');
+    if(previous) previous.onclick=()=>{show(index-1);restart()};
+    if(next) next.onclick=()=>{show(index+1);restart()};
+    dots.forEach(d=>d.onclick=()=>{show(Number(d.dataset.index));restart()});
+    show(0);restart();
+  });
+}
+
+function renderProject(slug,from){const p=projects.find(x=>x.slug===slug);if(!p){location.hash='projects';return} const same=projects.filter(x=>x.thread===p.thread);const idx=same.findIndex(x=>x.slug===p.slug), prev=same[(idx-1+same.length)%same.length], next=same[(idx+1)%same.length]; const fromThread=from?.startsWith('thread-');const back=fromThread?`#threads/${p.thread}`:'#projects';const backLabel=fromThread?`← Return to ${threads[p.thread].name}`:'← Return to Projects';const meta=Object.entries(p.meta).map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('');const ev=p.evidence.map(e=>e.url?`<a href="${e.url}" target="_blank" rel="noopener">↗ ${e.label}</a>`:`<span>${e.label}</span>`).join('');const connected=p.connected.length?`<div class="connected">Connected threads · ${p.connected.map(n=>`<a href="#threads/${n}">${threads[n].name}</a>`).join(' · ')}</div>`:'';$('#project-view').innerHTML=`<div class="project-hero contour"><a class="back" href="${back}" onclick="sessionStorage.setItem('restoreThread','${fromThread?'yes':'no'}')">${backLabel}</a><div class="project-kicker">Thread ${p.thread} — ${threads[p.thread].name} · ${p.type}</div><h1>${p.title}</h1><div class="project-sub">${p.subtitle}</div></div><div class="project-layout"><aside class="project-side"><dl>${meta}</dl>${connected}<div class="project-inquiry-label">Thread inquiry</div><div class="project-inquiry">${threads[p.thread].desc}</div></aside><article class="project-body">${projectBodyMarkup(p)}<div class="evidence"><h3>Evidence &amp; links</h3>${ev}</div></article></div><nav class="project-nav"><a href="${projectLink(prev,'thread-'+p.thread)}"><small>Previous project</small><br>${prev.title}</a><a href="${projectLink(next,'thread-'+p.thread)}"><small>Next project</small><br>${next.title}</a></nav>`;initProjectMedia();}
+function linkNatural(text){let s=text;projects.forEach(p=>{if(text.includes(p.title)){s=s.replace(p.title,`<a href="${projectLink(p,'thread-'+p.thread)}">${p.title}</a>`)}});return s}
+
+const writingArticles={
+  'city-as-interface':{
+    type:'Essay',thread:'Thread 03 — Designing the Rule',date:'May 2026',reading:'7 min read',
+    title:'The city as an interface: what agentic governance actually means',
+    standfirst:'The Civic Ledger is not a chatbot. It is an attempt to redesign the moment of negotiation between a citizen and a city — and what that redesign reveals about where governance has been failing.',
+    tags:['Governance','AI','Civic technology'],
+    body:[
+      'Most public systems still treat a request as a form to be completed rather than a relationship to be negotiated. The visible interface may be digital, but the governing logic beneath it often remains binary: permitted or refused, complete or incomplete, compliant or exceptional.',
+      'Civic Ledger begins from a different premise. A request can be structured without being flattened. Conditions, responsibilities, precedents, and unresolved trade-offs can remain visible long enough for a more accountable decision to form.',
+      'This shifts the role of AI. The purpose is not to automate judgment, but to distribute the burden of making judgment legible — to residents, officers, institutions, and the future cases that will inherit today’s precedent.'
+    ]
+  },
+  'repair-and-governance':{
+    type:'Field note',thread:'Thread 04 — What Ground Requires',date:'January 2026',reading:'6 min read',
+    title:'What repair asks of governance: early notes from Kentucky',
+    standfirst:'First observations from UnRavel LLC — what post-mining land requires institutionally, and why the governance tools we have were designed for growth rather than withdrawal.',
+    tags:['Repair','Land','Field note'],
+    body:[
+      'Repair is often framed as a technical task: restore the soil, stabilize the structure, replace the missing component. But the deeper difficulty is institutional. Who remains responsible when extraction has ended, ownership has changed, and the systems designed to create value are no longer present to maintain what remains?',
+      'The land does not separate ecology, infrastructure, memory, and livelihood into different departments. It presents them together. Governance usually encounters them apart.',
+      'These notes are not a resolved proposal. They are an attempt to understand what forms of stewardship, finance, and collective responsibility become necessary when a place can no longer be treated as an asset waiting for its next growth cycle.'
+    ]
+  }
+};
+
+function initWritingFilters(){
+  const buttons=[...document.querySelectorAll('#writing .writing-filter')];
+  const cards=[...document.querySelectorAll('#writing .writing-card')];
+  const empty=document.getElementById('writing-empty');
+  const count=document.getElementById('writing-count');
+
+  if(!buttons.length || !cards.length) return;
+
+  const applyFilter=(filter)=>{
+    let shown=0;
+    buttons.forEach(button=>{
+      button.classList.toggle('active',button.dataset.writingFilter===filter);
+      button.setAttribute('aria-pressed',String(button.dataset.writingFilter===filter));
+    });
+
+    cards.forEach(card=>{
+      const type=(card.dataset.writingType||'').trim();
+      const thread=(card.dataset.writingThread||'').trim();
+      const matches=
+        filter==='all' ||
+        type===filter ||
+        thread===filter;
+
+      card.hidden=!matches;
+      card.style.display=matches?'grid':'none';
+      if(matches) shown++;
+    });
+
+    if(empty) empty.style.display=shown===0?'block':'none';
+    if(count) count.textContent=String(shown);
+  };
+
+  buttons.forEach(button=>{
+    button.type='button';
+    button.onclick=(event)=>{
+      event.preventDefault();
+      applyFilter(button.dataset.writingFilter||'all');
+    };
+  });
+
+  applyFilter('all');
+}
+function renderArticle(slug){
+  const a=writingArticles[slug];if(!a){location.hash='#writing';return}
+  const shareUrl=encodeURIComponent(location.href);
+  document.getElementById('article-view').innerHTML=`<div class="article-shell">
+    <main class="article-main">
+      <a class="article-back" href="#writing">← Return to Writing</a>
+      <div class="article-meta">${a.type} · ${a.thread} · ${a.date} · ${a.reading}</div>
+      <h1 class="article-title">${a.title}</h1>
+      <p class="article-standfirst">${a.standfirst}</p>
+      <div class="article-lead-image">Lead image position<br>Recommended 2000 × 1125 px · 16:9</div>
+      <div class="article-body">
+        <p>${a.body[0]}</p>
+        <div class="article-inline-image">In-article image position<br>Recommended 1600 × 1200 px · 4:3</div>
+        <div class="article-caption">Image caption and credit</div>
+        <p>${a.body[1]}</p>
+        <h2>What remains unresolved</h2>
+        <p>${a.body[2]}</p>
+      </div>
+    </main>
+    <aside class="article-aside">
+      <div class="tag-row">${a.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <dl>
+        <dt>Published</dt><dd>${a.date}</dd>
+        <dt>Format</dt><dd>${a.type}</dd>
+        <dt>Thread</dt><dd>${a.thread}</dd>
+        <dt>Source</dt><dd>Original writing on Design the Rule</dd>
+      </dl>
+      <div class="article-share">
+        <button type="button" onclick="navigator.clipboard.writeText(location.href)">Copy link</button>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:?subject=${encodeURIComponent(a.title)}&body=${shareUrl}">Email</a>
+      </div>
+    </aside>
+  </div>`;
+}
+
+function router(){const {path,params}=routeParts(); if(path.startsWith('project/')){const origin=params.get('from')||'projects';showPage('project');const activeHref=origin.startsWith('thread-')?'#threads':'#projects';$$('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===activeHref));renderProject(path.split('/')[1],origin);scrollTo(0,0);return}if(path.startsWith('threads/')){showPage('threads');const n=path.split('/')[1];renderThreads(n);setTimeout(()=>{if(sessionStorage.getItem('restoreThread')==='yes'){scrollTo(0,Number(sessionStorage.getItem('threadScroll')||0));sessionStorage.removeItem('restoreThread')}},50);return}if(path==='projects'){showPage('projects');const saved=JSON.parse(sessionStorage.getItem('projectFilters')||'{}');state.thread=params.get('thread')||saved.thread||'all';renderProjects(false);return}showPage(['home','threads','writing','about','collaborate'].includes(path)?path:'home');if(path==='threads')renderThreads();
+  if(path==='writing')initWritingFilters();scrollTo(0,0)}
+const menuBtn=$('.menu');
+if(menuBtn){
+  menuBtn.onclick=()=>{
+    const open=$('#nav').classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',String(open));
+  };
+}
+const mobileFilterBtn=$('.mobile-filter-toggle');
+if(mobileFilterBtn){
+  mobileFilterBtn.onclick=()=>{
+    const panel=$('.filter-panel');
+    const open=panel ? panel.classList.toggle('open') : false;
+    mobileFilterBtn.setAttribute('aria-expanded',String(open));
+  };
+}
+const privacyClose=$('#privacy-close');
+if(privacyClose){
+  privacyClose.onclick=()=>$('#privacy').style.display='none';
+}
+function ensureExternalLinkArrows(root=document){
+  root.querySelectorAll('a[target="_blank"]:not(.writing-card)').forEach(a=>{
+    if(!a.textContent.includes('↗'))a.append(document.createTextNode(' ↗'));
+  });
+}
+function ensureProjectMetaTags(root=document){
+  root.querySelectorAll('#project .project-side dt').forEach(dt=>{
+    if(dt.textContent.trim().toLowerCase()!=='tags')return;
+    const dd=dt.nextElementSibling;
+    if(!dd||dd.classList.contains('project-meta-tags'))return;
+    const tags=dd.textContent.split('·').map(tag=>tag.trim()).filter(Boolean);
+    dd.classList.add('project-meta-tags');
+    dd.innerHTML=tags.map(tag=>`<span class="project-meta-tag">${tag}</span>`).join('');
+  });
+}
+function ensureProjectKicker(root=document){
+  root.querySelectorAll('#project .project-kicker:not([data-formatted])').forEach(kicker=>{
+    const match=kicker.textContent.trim().match(/^(Thread\s+\d+)\s+—\s+(.+)$/i);
+    if(!match)return;
+    kicker.dataset.formatted='true';
+    kicker.innerHTML=`<span class="project-kicker-thread">${match[1]}</span><span class="project-kicker-context">${match[2]}</span>`;
+  });
+}
+function ensureProjectEvidencePlacement(root=document){
+  const side=root.querySelector('#project .project-side');
+  const evidence=root.querySelector('#project .evidence');
+  if(!side||!evidence)return;
+  const facts=side.querySelector('dl');
+  if(facts&&evidence.parentElement!==side)facts.after(evidence);
+  else if(!facts&&evidence.parentElement!==side)side.append(evidence);
+}
+function ensureProjectBackground(){
+  const projectPage=document.querySelector('#project');
+  if(!projectPage)return;
+  const isUnravel=Boolean(projectPage.querySelector('.project-media[data-media="unravel-building-from-what-remains"]'));
+  projectPage.classList.toggle('project-unravel',isUnravel);
+}
+function moveComingSoonWritingToEnd(){
+  const archive=document.querySelector('#writing-archive');
+  if(!archive)return;
+  const comingSoon=[...archive.querySelectorAll('.writing-card.coming-soon')];
+  comingSoon.forEach(card=>archive.append(card));
+  comingSoon[0]?.classList.add('coming-soon-break');
+  if(comingSoon[0]&&!archive.querySelector('.writing-coming-head')){
+    const heading=document.createElement('div');
+    heading.className='writing-coming-head';
+    heading.textContent='Coming soon · Work in progress · Notes taking shape.';
+    comingSoon[0].before(heading);
+  }
+}
+new MutationObserver(()=>{ensureExternalLinkArrows();ensureProjectMetaTags();ensureProjectKicker();ensureProjectEvidencePlacement();ensureProjectBackground()}).observe(document.body,{childList:true,subtree:true});
+ensureExternalLinkArrows();
+ensureProjectMetaTags();
+ensureProjectKicker();
+ensureProjectEvidencePlacement();
+ensureProjectBackground();
+moveComingSoonWritingToEnd();
+renderHomeThreads();initFilters();window.addEventListener('hashchange',router);router();
+
+if(location.hash==='#writing' || location.hash.startsWith('#writing?')){setTimeout(initWritingFilters,0)}
+</script>
+<!-- v34: Thread 04 galleries and mobile header patch -->
+<style id="dtr-v34-patch">
+@media (max-width: 1100px) {
+  .mobile-menu-toggle,
+  .menu-toggle,
+  .nav-toggle,
+  [class*="mobile-menu-toggle"],
+  [class*="menu-toggle"],
+  button[aria-label="Menu" i],
+  a[aria-label="Menu" i] {
+    display: none !important;
+  }
+}
+</style>
+<script id="dtr-v34-patch-script">
+(() => {
+  const gallerySets = {
+    "thoughts-on-the-people-and-places-of-south-africa": [
+      "assets/thread4/south-africa-01.jpg",
+      "assets/thread4/south-africa-02.jpg",
+      "assets/thread4/south-africa-03.jpg"
+    ],
+    "unravel-building-from-what-remains": [
+      "assets/thread4/unravel-01.jpg",
+      "assets/thread4/unravel-02.jpg",
+      "assets/thread4/unravel-03.jpg"
+    ]
+  };
+
+  let syncing = false;
+
+  function removeMenuLabel() {
+    document.querySelectorAll(
+      "header button, header a, header [role='button'], .site-header button, .site-header a, nav button"
+    ).forEach((node) => {
+      if ((node.textContent || "").trim().toLowerCase() === "menu") {
+        node.style.setProperty("display", "none", "important");
+        node.setAttribute("aria-hidden", "true");
+        node.setAttribute("tabindex", "-1");
+      }
+    });
+  }
+
+  function currentSet() {
+    const route = (location.hash || location.pathname || "").toLowerCase();
+    return Object.entries(gallerySets).find(([slug]) => route.includes(slug))?.[1];
+  }
+
+  function activeIndex() {
+    const dots = [...document.querySelectorAll(
+      "[class*='gallery'] button, [class*='carousel'] button, [class*='slider'] button, .gallery-dot, .carousel-dot"
+    )].filter((node) => {
+      const r = node.getBoundingClientRect();
+      return r.width <= 42 && r.height <= 42;
+    });
+    const selected = dots.findIndex((node) =>
+      node.matches("[aria-current='true'], [aria-selected='true'], .active, .is-active") ||
+      getComputedStyle(node).backgroundColor === "rgb(17, 17, 17)"
+    );
+    return selected >= 0 ? selected : 0;
+  }
+
+  function syncGallery() {
+    if (syncing) return;
+    const sources = currentSet();
+    if (!sources) return;
+    syncing = true;
+    try {
+      const candidates = [...document.querySelectorAll(
+        ".project-gallery img, .gallery img, [class*='gallery'] img, [class*='carousel'] img, [class*='slider'] img, main img"
+      )].filter((img) => {
+        const r = img.getBoundingClientRect();
+        return r.width > 220 && r.height > 160;
+      });
+      if (!candidates.length) return;
+
+      const visible = candidates.filter((img) => {
+        const r = img.getBoundingClientRect();
+        const s = getComputedStyle(img);
+        return r.width > 0 && r.height > 0 && s.display !== "none" && s.visibility !== "hidden";
+      });
+
+      if (candidates.length >= sources.length) {
+        candidates.slice(0, sources.length).forEach((img, i) => {
+          const wanted = sources[i];
+          if (!img.getAttribute("src")?.endsWith(wanted)) img.src = wanted;
+          img.removeAttribute("srcset");
+        });
+      }
+
+      const hero = visible.sort((a, b) => {
+        const ar = a.getBoundingClientRect();
+        const br = b.getBoundingClientRect();
+        return (br.width * br.height) - (ar.width * ar.height);
+      })[0];
+      if (hero) {
+        const wanted = sources[activeIndex() % sources.length];
+        if (!hero.getAttribute("src")?.endsWith(wanted)) hero.src = wanted;
+        hero.removeAttribute("srcset");
+      }
+    } finally {
+      syncing = false;
+    }
+  }
+
+  function apply() {
+    removeMenuLabel();
+    syncGallery();
+  }
+
+  addEventListener("hashchange", () => setTimeout(apply, 0));
+  addEventListener("resize", removeMenuLabel);
+  document.addEventListener("click", () => setTimeout(syncGallery, 0), true);
+  new MutationObserver(() => requestAnimationFrame(apply))
+    .observe(document.documentElement, { childList: true, subtree: true, attributes: true });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", apply);
+  } else {
+    apply();
+  }
+})();
+</script>
+
+</body></html>

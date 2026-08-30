@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f5f3ee"/>
+  <g fill="none" stroke="#a6a39b" stroke-width="1.15" opacity=".52">
+    <path d="M720-45C842 40 833 151 922 227s217 50 321 154"/>
+    <path d="M756-53C872 34 865 139 951 210s207 49 308 146"/>
+    <path d="M793-60C903 28 896 127 980 194s196 47 294 138"/>
+    <path d="M831-66C935 22 927 116 1009 179s185 44 280 129"/>
+    <path d="M869-71C967 17 959 105 1038 164s174 41 266 120"/>
+    <path d="M908-75C1000 12 991 95 1067 150s164 38 253 111"/>
+    <path d="M947-78C1033 8 1024 85 1096 137s153 34 239 102"/>
+    <path d="M986-80C1067 4 1057 76 1125 124s143 31 226 94"/>
+    <path d="M1026-81C1101 1 1091 67 1154 112s132 28 212 86"/>
+    <path d="M1066-80C1135-2 1125 59 1183 101s122 24 198 77"/>
+    <path d="M701 675C810 566 799 457 888 379s220-62 324-166"/>
+    <path d="M740 681C844 575 834 471 920 397s209-58 310-157"/>
+    <path d="M779 686C878 584 868 485 952 415s199-54 297-148"/>
+    <path d="M819 690C912 593 902 499 984 433s188-50 283-139"/>
+    <path d="M859 693C946 602 936 513 1016 451s178-46 270-130"/>
+  </g>
+  <line x1="70" y1="74" x2="1130" y2="74" stroke="#d8d5ce" stroke-width="2"/>
+  <text x="72" y="132" fill="#111111" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" letter-spacing="4">DESIGN THE RULE</text>
+  <rect x="72" y="165" width="76" height="5" fill="#0047ff"/>
+  <text x="72" y="258" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">
+    <tspan x="72" dy="0">The systems that shape shared life were designed.</tspan>
+    <tspan x="72" dy="56" fill="#0047ff">They can be made visible, tested, remade, and repaired.</tspan>
+  </text>
+  <text x="72" y="545" fill="#5a5a56" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="500" letter-spacing="3">EUNJI KANG · SEOUL &amp; LONDON</text>
+  <line x1="70" y1="578" x2="1130" y2="578" stroke="#d8d5ce" stroke-width="2"/>
+</svg>
