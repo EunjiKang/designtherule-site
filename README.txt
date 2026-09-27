@@ -7,3 +7,5 @@ All existing content is preserved.
 Upload the CONTENTS of this folder to the repository root; do not upload this ZIP as the website.
 Entry: index.html. Reference copy: designtherule_v35.html (kept at its existing filename).
 Includes five local Civic Ledger thumbnails.
+
+V37: Consistent primary-page top spacing and immediate navigation scroll reset.
