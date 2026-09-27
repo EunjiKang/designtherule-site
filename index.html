@@ -2173,6 +2173,7 @@ footer{
 
 <style id="dtr-v37-page-start">
 /* Shared first-line position for every primary page. */
+.page.active { animation:none; }
 #home .hero-main,
 #threads .page-hero,
 #projects .page-hero,
@@ -2815,6 +2816,11 @@ if(location.hash==='#writing' || location.hash.startsWith('#writing?')){setTimeo
 
 
 <script id="dtr-v37-navigation">
+// A direct primary-page URL must start at the same position as a tab click.
+window.addEventListener('load',()=>{
+ if(['home','threads','projects','writing','about','collaborate'].includes(routeParts().path))
+  requestAnimationFrame(()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
+});
 // Prevent native fragment scrolling from moving the page under the sticky header.
 document.querySelectorAll('header .brand, header .nav a').forEach(link=>{
  link.addEventListener('click', event=>{
