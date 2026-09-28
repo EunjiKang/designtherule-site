@@ -9,3 +9,5 @@ Entry: index.html. Reference copy: designtherule_v35.html (kept at its existing 
 Includes five local Civic Ledger thumbnails.
 
 V37: Consistent primary-page top spacing and immediate navigation scroll reset.
+
+V38: GA4 G-Q693VPMPQK, opt-in analytics, page-level SPA tracking. Keep Enhanced Measurement history tracking off to avoid duplicate page views. Deploy both HTML files and dtr-analytics.js together.
